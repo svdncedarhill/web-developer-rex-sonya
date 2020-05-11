@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Div Tag</title>
+<style>
+    body{
+        font-family:Verdana;
+        font-size:30px;
+        background-color:#e6a6a6;
+        padding:0px;
+        margin:0px;
+        }
+        *
+        {
+        box-sizing:border-box;
+        }
+        .box
+        {
+            background-color:#d0ee8b;
+            width:400px;
+            height:300px;
+            float: left;
+            margin:30px;
+            background-size:cover;
+            padding-left:0px;
+            padding-top:0px;
+            color:white;
+            transition:transform 0.05s;
+        }
+        .box:hover
+        {
+            transform:scale(1.1);
+        }
+        #pic1
+        {
+            background-image:url("Daisys shaped in a heart.jpg");
+        }
+        #pic2
+        {
+            background-image: url("Roses Bundled in a circle.jpg");
+        }
+        #pic3
+        {background-image: url("Violet Flower Bouquet.jpg");
+        }
+
+</style>
+</head>
+<body>
+    <div class="box"id="pic1">Daisys shaped in a heart</div>
+    <div class="box"id="pic2">Roses Bundled in a circle</div>
+    <div class="box"id="pic3">Violet Flower Bouquet</div>
+</body>
+</html>

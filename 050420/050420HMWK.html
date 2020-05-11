@@ -6,47 +6,78 @@
     <title>Calculate Form</title>
 </head>
 <style>
-.box
+.container1
 {
-border: 2px;
+width:380px;
+height:315px;
+border: 6px solid grey;
 padding:10px;
-height:100px;
-width:150px;
-margin: auto;
-text-align: center;
-font-family: Tahoma;
-Font-size: 10pt;
-float: left;
+float: center;
+margin-top: 250px;
+margin-left: 550px;
+background-color: white;
 }
-
+.container2
+{
+    width: 98%;
+    height:50px;
+    padding-top: 50px;
+    padding-left:20px;
+    border:1px solid grey;
+    
+}
+body
+{
+    font-family:verdana;
+    font-size:25px;
+    background-color:rgb(8, 14, 14)
+}
+*
+{
+box-sizing:border-box;
+padding: 0px;
+}
+.button
+{
+    width:24%;
+    margin:0px;
+    margin-top: 0px;
+    border:1px solid;
+    padding:12px;
+    text-align: center;
+    color:white;
+    background-color:rgb(82, 76, 76);
+    float:left;
+}
+#red
+{
+    background-color: red;
+}
+#checkmark
+{
+    background-color:green;
+    image:url("checkmarkicon.jpg");
+}
 </style>
 <body>
- <div class="box"></div>
- 
-    <div class="box">7</div>
-    <div class="box">8</div>
-    <div class="box">9</div>
-    <div class="box">=</div>
-
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">6</div>
-    <div class="box">C</div>
-
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-    <div class="box">X</div>
-
-    <div class="box">0</div>
-    <div class="box">.</div>
-    <div class="box">+/-</div>
-    <div class="box"></div>
+ <div class="container1">
+ <div class="container2"></div>
+    <div class="button">7</div>
+    <div class="button">8</div>
+    <div class="button">9</div>
+    <div class="button">=</div>
+    <div class="button">4</div>
+    <div class="button">5</div>
+    <div class="button">6</div>
+    <div class="button">C</div>
+    <div class="button">1</div>
+    <div class="button">2</div>
+    <div class="button">3</div>
+    <div class="button"id="red">X</div>
+    <div class="button">0</div>
+    <div class="button">.</div>
+    <div class="button">+/-</div>
+    <div class="button"id="checkmark"></div>
     
-    
-    
-    
-
-
 </body>
 </html>
