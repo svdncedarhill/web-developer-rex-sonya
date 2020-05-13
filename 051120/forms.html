@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+<style>
+    body
+    {
+    font-family:Verdana;
+    font: size 20;px;
+    }
+    *
+    {
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+    }
+    .form-group
+    {
+    width:100%;
+    height:38px;
+    }
+    .form-label
+    {
+    width:30%;
+    float:left;
+    height:38px;
+    padding:4px;
+    padding-top:7px
+    /*background-color:#bd5656;*/
+    }
+    .form-element
+    {
+    width:70%;
+    float: left;
+    height:38px;
+    padding:4px
+    }
+    .form-control
+    {
+        width: 100%;
+        font-family:Verdana;
+        font-size:18x;
+        border:1px solid #1076ca;
+        border-radius:4px;
+        padding:4px;
+        padding-left:7px;
+        padding-right:7px;
+        box-shadow:0px 0px 3px 1px #cecbcb;
+    }
+    .form-control:focus
+    {
+        box shadow: 0px 0px 3px 3px #1b87c5;
+    }
+</style>
+</head>
+<body>
+
+    <div class="form-group">
+        <div class="form-label">
+            <label>Name</label>
+        </div>
+        <div class="form-element">
+            <input type="text"class="form-control">
+        </div>
+    </div>
+
+
+
+
+    <form>
+        <div><input type="password"></div>
+        <div><input type="checkbox"></div>
+        <div>
+            <input type="radio"name="abc">
+            <input type="radio"name="abc">
+            <input type="radio"name="abc">
+        </div>
+        <div><input type="email"></div>
+        <div><input type="color"></div>
+        <div><input type="date"></div>
+        <div><input type="datetime-local"></div>
+        <div><input type="time"></div>
+        <div><input type="month"></div>
+        <div><input type="week"></div>
+        <div><input type="file"></div>
+        <div><input type="url"></div>
+        <div><input type="number"></div>
+        <div><input type="range" min="0" max="10"></div>
+        <div><input type="search"></div>
+        <div><input type="image" src="save.png"></div>
+        <div><input type="submit"value="Save"></div>
+        <div><input type="reset"></div>
+    </form>
+</body>
+</html>
