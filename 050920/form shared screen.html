@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    body
+    {
+      font-family: Verdana;
+      font-size: 20px;
+    }
+    *
+    {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+    .form-group
+    {
+      width: 100%;
+      height: 38px;
+    }
+    .form-label
+    {
+      width: 30%;
+      float: left;
+      height: 38px;
+      padding: 4px;
+      padding-top: 7px;
+      /* background-color: #bd5656; */
+    }
+    .form-element
+    {
+      width: 70%;
+      float: left;
+      height: 38px;
+      padding: 4px;
+    }
+    .form-control
+    {
+      width: 100%;
+      font-family: Verdana;
+      font-size: 18px;
+      border: 1px solid #1076ca;
+      border-radius: 4px;
+      padding: 4px;
+      padding-left: 7px;
+      padding-right: 7px;
+      box-shadow: 0px 0px 3px 1px #cecbcb;
+    }
+    .form-control:focus
+    {
+      box-shadow: 0px 0px 3px 3px #1b87c5;
+    }
+    .btn
+    {
+      background-color: #0c5e94;
+      color: white;
+      padding: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: 1px solid black;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 19px;
+      box-shadow: 1px 2px 3px 1px #000000;
+      transition: box-shadow 0.1s;
+      margin-bottom: 4px;
+    }
+    .btn:hover
+    {
+      box-shadow: 1px 2px 3px 3px #000000;
+      background-color: #3f84b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Name</label>
+    </div>
+    <div class="form-element">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Password</label>
+    </div>
+    <div class="form-element">
+      <input type="password" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+    </div>
+    <div class="form-element">
+      <input type="checkbox">
+      <label>Receive News Letters</label>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Gender</label>
+    </div>
+    <div class="form-element">
+      <input type="radio" name="gender">
+      <label>Male</label>
+      <input type="radio" name="gender">
+      <label>Female</label>
+      <input type="radio" name="gender">
+      <label>Other</label>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Email</label>
+    </div>
+    <div class="form-element">
+      <input type="email" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Email</label>
+    </div>
+    <div class="form-element">
+      <input type="color" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Date of traveling</label>
+    </div>
+    <div class="form-element">
+      <input type="date" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Date &amp; of traveling</label>
+    </div>
+    <div class="form-element">
+      <input type="datetime-local" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Date &amp; of traveling</label>
+    </div>
+    <div class="form-element">
+      <input type="time" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Month &amp; of traveling</label>
+    </div>
+    <div class="form-element">
+      <input type="month" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Week &amp; of traveling</label>
+    </div>
+    <div class="form-element">
+      <input type="week" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Attachment</label>
+    </div>
+    <div class="form-element">
+      <input type="file" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Website</label>
+    </div>
+    <div class="form-element">
+      <input type="url" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Amount</label>
+    </div>
+    <div class="form-element">
+      <input type="number" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Price range</label>
+    </div>
+    <div class="form-element">
+      <input type="range" min="0" max="10" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+      <label>Search</label>
+    </div>
+    <div class="form-element">
+      <input type="search" class="form-control">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+    </div>
+    <div class="form-element">
+      <input type="image" src="save.png">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <div class="form-label">
+    </div>
+    <div class="form-element">
+      <input type="submit" value="Save" class="btn">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-label">
+    </div>
+    <div class="form-element" style="padding-top: 10px">
+      <input type="reset" class="btn">
+    </div>
+  </div>
+
+
+</body>
+</html>
