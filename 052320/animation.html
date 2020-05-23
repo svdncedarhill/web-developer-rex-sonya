@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+    #div1
+    {
+        background-color: #e49797;
+        width:200ps;
+        height:250px;
+        font-size: 40px;
+    }
+    #div1:hover
+    {
+animation:myanimation 10s;
+    }
+
+    @keyframes myanimation
+    {
+        0%{background-color:green}
+        50%{background-color:red}
+        100%{background-color:blue}
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="div1">SONYA</div>
+    
+</body>
+</html>
