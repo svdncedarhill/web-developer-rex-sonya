@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textboxes</title>
+    <style>
+    .textbox
+    {
+        font: size 22px;
+        font-family: Tahoma;
+        Border:1px solid mediumblue;
+        Padding:4px;
+        margin:4px;
+        box-shadow: 0px 0px 3px 1px mediumblue;
+        border-radius:3px;
+        transition:box-shadow 0.2s;
+        width:100%
+    }
+    .textbox:focus
+    {
+        box-shadow: 0px 0px 4px 3px mediumblue;
+    }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="First Name" class="textbox">
+    <input type="text" placeholder="Last Name" class="textbox">
+    <input type="text" placeholder="Address" class="textbox">
+    <input type="text" placeholder="City" class="textbox">
+    <input type="password" placeholder="Password" class="textbox">
+    <input type="date" class="textbox">
+    <input type="email" placeholder="Email" class="textbox">
+</body>
+</html>
