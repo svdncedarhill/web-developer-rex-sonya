@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Attributes</title>
+</head>
+<body>
+    <form autocomplete="off">
+
+        <fieldset>
+            <legend>Personal Details</legend>
+        
+       <div><label for="prefix">Prefix</label></div>
+        <div><select id="Prefix" name="prefix" tabindex="67">
+        <option value="Mr.">Mr.</option>
+        <option value="Mrs.">Mrs.</option></select></div>
+
+        <div><label for="fname">First Name</label></div>
+        <div><input type="text"id="fname"name="fname"autocomplete="on"autofocus="autofocus" placeholder="First Name" tabindex="1" required="required" maxlength="40" pattern="^[A-Za-z]'$"></div>
+
+        <div><label for="lname">Last Name:</label></div>
+        <div><input type="text" id="lname" name="lastname" placeholder="Last Name" tabindex="2" required="required" maxlength="40" pattern="^[A-Za-z]'$"></div>
+
+        <div><label for="age">Age:</label></div>
+        <div><input type="text" id="age" name="age" placeholder="Age" tabindex=45 pattern="^[0-9]{1,2}$"></div>
+    </fieldset>
+
+        <div><label for="city">City:</label></div>
+        <div>
+        <input type="text" id="city" value="Dallas" name="city" placeholder="City"tabindex="5"></div>
+
+        <div><label for="country">Country:</label></div>
+        <div><input type="text" id="country" name="country" placeholder="Country"tabindex="4" list=countrieslist>
+        
+        <datalist id=countrieslist>
+            <option value="USA"></option>
+            <option value="UK"></option>
+            <option value="India"></option>
+        </datalist>
+        </div>
+
+        <div><label for ="attachment">Attachment:</label></div>
+        <div><input type="file" id="attachment" name="attachment" multiple="multiple" tabindex="6"></div>
+
+        <div><label for ="amount">Amount:</label></div>
+        <div><input type="number" id="amount" name="amount" step="100" min="10" max="10000" tabindex="3"></div>
+
+        <div><label for="dateofjoining">Date of joining</label></div>
+        <div><input type="date" id="dateofjoining" name="dateofjoining" min="2000-01-01" max="2020-12-31" tabindex="65"></div>
+
+        <div><label for="comments">Comments</label></div>
+        <div><textarea id="comments" name="comments" tabindex="66" col="35" rows="6" placeholder="Comments"></textarea></div>
+
+        <div><label for="bank">Bank</label></div>
+        <div><select id="bank" name="bank" tabindex="67">
+            <option value="Bank of America">Bank of Ameica</option>
+            <option value="Chase Bank">Chase Bank</option>
+            <option value="City Credit Union">City Credit Union</option>
+            <option value="Nations Bank">Nations Bank</option></select></div>
+
+            <div><label for="bank">Choose Banks</label></div>
+            <div><select id="bank" name="bank" tabindex="68" multiple="multiple">
+            <option value="Bank of America">Bank of Ameica</option>
+            <option value="Chase Bank">Chase Bank</option>
+            <option value="City Credit Union">City Credit Union</option>
+            <option value="Nations Bank">Nations Bank</option></select></div>
+        
+            <div><label for="bank">Bank:</label></div>
+            <div><select id="bank" name="bank" tabindex="69">
+            <optgroup label="Top Banks"></optgroup>
+            <option value="Bank of America">Bank of Ameica</option>
+            <option value="Chase Bank">Chase Bank</option>
+            <option value="Citizens National Bank">Citizens Nationsl Bank</option>
+            <option value="Wells Fargo Bank">Wells Fargo Bank</option></optgroup>
+
+            <optgroup label="Other Banks">
+                <option value="Regions Bank">Regions Bank</option>
+                <option value="Woodforest National Bank">Woodforest National Bank</option>
+                <option value="A+ Credit Union">A+ Credit Union</option>
+                <option value="Texas Trust Credit Union">Texas Trust Credit Union</option></optgroup>        
+                </select></div>
+
+
+        <div>
+        <button tabindex="7">OK</button>
+        </div>
+
+</form>
+    
+</body>
+</html>

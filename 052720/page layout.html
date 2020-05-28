@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Layout</title>
+  <style>
+    body
+    {
+      font-family: Verdana;
+      font-size: 24px;
+    }
+
+    *
+    {
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #header {
+      background-color: #105f8d;
+      color: #ffffff;
+      border-bottom: 2px solid #acaaaa;
+      box-shadow: 0px 3px 5px 2px #acaaaa;
+      height: 40px;
+    }
+
+    #first-header {
+      /* background-color: #aee77f; */
+      padding-left: 20px;
+      padding-top: 5px;
+    }
+
+    #nav {
+      /* background-color: #e2ab45; */
+      float: left;
+      width: 80%;
+      height: 40px;
+    }
+
+    #leftbox {
+      background-color: #e6e7e5;
+      padding: 4px;
+      margin-top: 3px;
+    }
+
+    #pagecontent
+    {
+      /* background-color: #3a76c5; */
+      padding: 50px;
+      height: 1000px;
+      width: 85%;
+      margin-top: 3px;
+      float: left;
+    }
+
+    #brand
+    {
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+
+    #nav ul
+    {
+      list-style-type: none;
+      height: 40px;
+    }
+
+    #nav ul li {
+      width: 120px;
+      height: 40px;
+      line-height: 40px;
+      /* background-color: #c79393; */
+      margin-left: 3px;
+      margin-right: 3px;
+      transition: background-color 0.2s, box-shadow 0.2s;
+    }
+
+    #nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+    #nav ul li:hover
+    {
+      background-color: #1973af;
+      color: white;
+      text-decoration: underline;
+      box-shadow: 0px 0px 4px 2px #1e5194;
+    }
+
+    #leftbox ul
+    {
+      list-style-type: none;
+    }
+
+    #leftbox ul li
+    {
+      padding: 8px;
+    }
+
+    #leftbox ul li a
+    {
+      color: black;
+      text-decoration: none;
+      width: 100%;
+      /* background-color: #d63d3d; */
+      display: inline-block;
+    }
+
+    #leftbox ul li:hover
+    {
+      background-color: #777474;
+    }
+    
+    #leftbox ul li a:hover
+    {
+      color: #ffffff;
+    }
+
+    @media(min-width:100px)and (max-width:800px)
+  </style>
+</head>
+
+<body>
+
+  <!-- header starts -->
+  <header id="header">
+
+		<div id="first-header">
+		  <div id="brand">Softwave</div>
+		</div>
+
+		<nav id="nav">
+		  <ul>
+			<li> <a href="#">Home</a> </li>
+			<li> <a href="#">Products</a> </li>
+			<li> <a href="#">Service</a> </li>
+			<li> <a href="#">Contact</a> </li>
+			<li> <a href="#">Careers</a> </li>
+		  </ul>
+		</nav>
+	</header>
+  <!-- header ends -->
+
+
+  <!-- leftbox starts -->
+  <section id="leftbox">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+	</section>
+  <!-- leftbox ends -->
+
+
+  <!-- pagecontent starts -->
+  <section id="pagecontent">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione fuga voluptas ex aliquam officia, itaque et eos dolorem, atque, inventore accusantium eligendi quae hic labore culpa aut assumenda ducimus nemo.
+    Facilis iusto quaerat sequi perspiciatis voluptatum et, enim illum cum quisquam accusamus ducimus, molestias ea? Quibusdam tempora tempore, expedita officiis vitae delectus quasi modi accusantium veniam molestiae quis dicta quos!
+    Cupiditate nemo itaque odit. Cupiditate fuga accusamus facere. Eveniet nihil fugiat doloribus quod, natus quae quasi repellendus sunt omnis, nobis optio consequuntur illum libero saepe cupiditate, earum maiores. Ratione, praesentium.
+    Voluptatem tempora cum similique placeat odit recusandae accusamus optio officia! Provident accusamus maxime voluptate, molestiae suscipit consequatur cumque, quibusdam fugit fugiat facere repellat mollitia quaerat aliquid dolorum! Maiores, alias aut?
+    Provident odio autem neque labore voluptatibus cumque reiciendis consequuntur quo vero, aliquid quas, esse recusandae aspernatur magnam! Aperiam hic neque in ullam a reiciendis, nostrum quo soluta repellat! Commodi, inventore?
+    Similique temporibus ipsa delectus exercitationem expedita nihil, praesentium rerum in sed, libero alias eveniet? Iste saepe aut eligendi accusantium recusandae iusto. Minima exercitationem illo placeat sit, qui aspernatur ducimus earum.
+    Repellendus rem minima sint adipisci dolorem. Accusamus quod atque, saepe rem doloribus natus necessitatibus. Impedit, sapiente eos voluptas consectetur quibusdam similique quae natus eius quod vero, doloribus, voluptate provident corporis!
+    Esse commodi possimus fuga facilis at, amet a, tenetur perferendis corporis est nobis, praesentium autem! Maiores nemo commodi blanditiis sed placeat natus porro corporis earum, nobis quos? Aut, hic quaerat.
+    Totam, eius, voluptate vero voluptas quia id reprehenderit dignissimos architecto consectetur aliquam odio non exercitationem. Ab similique aut error quidem eaque fugit illum nesciunt itaque doloribus saepe, enim adipisci consectetur.
+    Qui quo rem quis officia et sit dolorum nobis quisquam officiis dolore saepe, nisi inventore quidem? Non reiciendis, saepe qui perspiciatis quibusdam sed modi illum dolor obcaecati eaque similique expedita?
+  </section>
+  <!-- pagecontent ends -->
+
+  <!--footer starts-->
+  <footer id="footer">All rights &copy; Reserved 2020</footer>
+  <!--footer ends-->
+|
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+<style>
+    .buttons
+    {
+    border:1px solid green;
+    padding:5px;
+    margin:5px;
+    box-shadow:0px 0px 5px 1px black;
+    transition:box-shadow 0.2s,transform 0.2s
+    }
+    .buttons:hover
+    {
+        background-color: teal;
+        box-shadow:0px 0px 5px 3px black
+    }
+
+    .class1
+    {background-color: yellowgreen;}
+    .class2
+    {background-color: violet;}
+    .class3
+    {background-color: tomato;}
+    .class4
+    {background-color: lightblue;}
+    .class5
+    {background-color: grey;}
+    .buttons:active
+    {
+    transform: scale(0.9);
+    }
+</style>
+
+</head>
+<body>
+    <button class="buttons class1">OK</button>
+    <button class="buttons class2">Save</button>
+    <button class="buttons class3">Submit</button>
+    <button class="buttons class4">Delete</button>
+    <button class="buttons class5">More Details</button>
+</body>
+</html>
