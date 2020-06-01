@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
+    <style>
+        .box
+        {
+            width: 600px;
+            height:700px;
+            border:2px solid gray;
+            border-radius: 20px;
+            box-shadow:5px;
+        }
+        *
+        {
+            box-sizing:border-box;
+            padding: 0px;
+        }
+        body
+        {
+            font-family: Verdana;
+            text-align: center;
+        }
+        header
+        {
+            height:130px;
+            background-color: rgb(98, 179, 17);
+            padding-top: 25px;
+            border-radius: 20px 20px 0px 0px;
+            color: #ffffff;
+        }
+        .textbox
+        {
+            width:50%;
+            height:40px;
+            border-radius:20px 20px 20px;
+            padding:20px;
+            margin-top: 30px;
+            background-color: lightgrey;
+            text-emphasis: emphasis;
+        }
+        .content1
+        {
+            font-size: 12px;
+            padding:15px;
+            margin-right:0px;
+        }
+        .button
+        {
+            width:50%;
+            height:40px;
+            border-radius:20px 20px 20px;
+        }
+    
+    </style>
+
 </head>
 <body>
-    header
+    <div class="box">
+        <header><h1>Sign In</h1></header>
+
+    
+        <div><input type="text" placeholder="Username" class="textbox"></div>
+
+        <div><input type="text" placeholder="Password" class="textbox"></div>
+
+        <div class= "content1">Forgot Password/Username?</div>
+
+        <div class="button"><button>SIGN IN</button></div>
+
+        <div class= "content2">Don't have an account?</div>
+        <div class= "content3">SIGN UP NOW</div>
+    </div>
 </body>
 </html>
