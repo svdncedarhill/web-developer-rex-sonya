@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:cornflowerblue
+        }
+
+        .container{
+            width:550px;
+            height:300px;
+            margin:100px auto;
+            box-shadow:0 0 10px black;    
+            position:relative;        
+        }
+        .container img{
+            width:inherit;
+            height:inherit;
+        }
+        .container #details{
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:50%;
+            color:white;
+            background:rgba(0,0,0,0.7);
+            height:100%;
+            padding-left:10px;   
+            transform:rotateY(-90deg);
+            transition: all 2s;
+            transform-origin:left;  
+            font-family:'comic sans ms',serif       
+        }
+        .container:hover #details{
+            transform:rotateY(0deg)
+        }
+    </style>
+    <title>Transformations</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/food/burger4.jpg" alt="">
+        <div id="details">
+            <h2>Desserts</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatum dolore nisi consequuntur voluptatibus eum tenetur eos, repellat suscipit quod est voluptas, dolores ullam iusto ut blanditiis architecto? Labore, ex? Architecto odit excepturi optio magni aliquid, laborum rerum mollitia adipisci!</p>
+        </div>
+    </div>
+</body>
+</html>

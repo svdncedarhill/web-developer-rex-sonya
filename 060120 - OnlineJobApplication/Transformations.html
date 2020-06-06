@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformations</title>
+    <style>
+        section{
+            background-color:teal;
+            padding:20px;
+            border-radius:20px;
+            text-align:center;
+        }
+        section article{
+            background:linear-gradient(45deg,black,darkblue);
+            color:white;
+            width:230px;
+            padding:15px;
+            border-radius:20px;
+            display:inline-block;
+            margin-right:30px; 
+            transition: all 2s;           
+        }
+        article:hover{
+            background:linear-gradient(45deg,black, orangered);
+        }
+        #trans-1 article:hover{
+            transform:translateY(-35px)
+        }
+        #trans-2 article:hover{
+            transform:scale(1.3,1.3)
+        }
+        #trans-3 article:hover{
+            transform:rotate(-45deg)
+        }
+        #trans-4 article:hover{
+            transform:rotate(45deg) scale(1.2,1.2)
+        }
+    </style>
+</head>
+<body>
+    <h2>transform:translateY</h2>
+    <section id="trans-1">
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>                                
+    </section>
+
+    <h2>transform:scale</h2>
+    <section id="trans-2">
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>                                
+    </section>    
+
+    <h2>transform:rotate</h2>
+    <section id="trans-3">
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>                                
+    </section>   
+    
+    <h2>transform:rotate & scale</h2>
+    <section id="trans-4">
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus in voluptatem aliquid ut, cupiditate, accusamus odio fuga blanditiis aliquam earum odit deserunt dolorum placeat? Ut fuga et voluptates cum voluptatem beatae, repellendus voluptatum corporis dolor repellat sunt perspiciatis consequatur! Nobis nesciunt rerum temporibus repellat. A hic distinctio asperiores voluptatibus.
+        </article>                                
+    </section>
+</body>
+</html>
