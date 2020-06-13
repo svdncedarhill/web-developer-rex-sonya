@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested If</title>
+</head>
+<body>
+    <script>
+        var a = 45,b = 45;
+        if (a<=b)
+        {
+            if (a<b)
+            {
+                console.log("a is less than b");
+            }
+            else
+            {
+                console.log("a and b are equal");
+            }
+        }
+        else
+        {
+            console.log("a is greater than b")
+        }
+        
+
+        //a = 10,b = 45,c = 20
+        //findout biggest of a,b,c(using nested if)
+
+        var a = 10, b = 45, c = 20;
+        if(a > b)
+        {
+            if(a > c)
+            {
+            console.log("a is biggest");
+            }
+            else
+            {
+            console.log("c is biggest");
+            }
+        }
+        else
+        {
+            if(c > b)
+            {
+                console.log("c is biggest");
+            }
+            else
+            {
+                console.log("b is biggest");
+            }   
+        }
+    </script>
+    
+</body>
+</html>
