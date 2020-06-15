@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest of Three Numbers</title>
+</head>
+<style>
+    body
+    {
+        margin: 0px;
+    }
+    #nav
+    {
+        background-color: orangered;
+        padding:10px;
+    }
+    #nav h2
+    {
+        margin: 0px;
+    }
+</style>
+<body>
+    <div id="nav">
+        <h2>Java Script | Largest of Three Numbers</h2>
+    </div>
+
+    <script>
+        let x=10,y=20,z=30, lar;
+
+        if(x>y)
+        {
+            //x is greater than y
+            if(x>z){
+                lar = x;
+            }
+            else{
+                lar = z;
+            }
+        }
+        else
+        {
+            //y greater than x
+            if (y>z)
+            {
+                lar = y;                
+            }
+            else
+            {
+                lar = z;
+            }
+        }
+
+        console.log(`Largest among(${x},${y},${z}) = ${lar}`)
+    </script>
+
+
+    
+</body>
+</html>
