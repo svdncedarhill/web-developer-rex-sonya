@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Natural Numbers In Class Practice</title>
+</head>
+<style>
+    body
+    {
+        margin:0px;
+    }
+</style>
+<body>
+    <div style= "background: orangered; padding: 10px">
+        <h2 style= "margin:0px">Java Script | First 10 Natural Numbers</h2>
+    </div>
+
+    <div style= "background-color: lightgreen; font-size:22px; margin:20px; padding:20px; width:400px; border-radius:20px;box-shadow:0 0 10px black;"'naturals_horizontal'> </div>
+
+    <script>
+        var results = 'First 10 Natural Numbers are: <br>';
+        var n = 1;
+        while(n < 11)
+        {
+             if(n == 10)
+        {
+            results = results + n;
+        }
+        else
+        {
+            results = results + ", " + n;
+        }
+        n++;
+    }
+    console.log(results)
+    document.getElementById('naturals_horizontal').innerHTML = results
+    </script>
+</body>
+</html>

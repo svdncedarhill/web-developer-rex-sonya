@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #main_nav{
+            background:linear-gradient(45deg,darkslategray,blueviolet);
+            color:white;
+            padding:10px;
+        }
+        #main_nav h2{
+            margin:10px 0px
+        }
+        #result_region{
+            font-size:20px;
+            margin:20px;
+            width:40%;
+            padding:10px;
+            background-color:coral;
+            border-radius:15px;
+            box-shadow:0 0 10px black;
+        }        
+    </style>
+    <title>Natural Number Between</title>
+</head>
+<body>
+    <div id="main_nav">
+        <h2>Java Script | Natural Numbers between x=
+            <span id="firstNo" style="color:yellow">__</span> & y=
+            <span id="secondNo" style="color:yellow">__</span>
+        </h2>
+    </div>
+
+    <div id="result_region"></div>
+
+    <script>
+        var x=11;
+        var y=25;
+        
+        document.getElementById('firstNo').innerHTML = x;
+        document.getElementById('secondNo').innerHTML = y;
+
+        var res=''        
+
+        while(x <= y)
+        {
+            if(x == y){
+                res = res + x
+            }
+            else{
+                res = res + x+", ";
+            }
+
+            x++;           
+        }
+        document.getElementById('result_region').innerHTML = res;
+    </script>
+</body>
+</html>

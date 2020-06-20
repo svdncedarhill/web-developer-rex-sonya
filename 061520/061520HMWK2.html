@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script | First 10 Natural Numbers Homework</title>
+
+<style>
+    body
+    {
+         margin:0px;
+    }
+    h2
+    {
+        margin: 0px;
+    }
+    #naturals_verticle
+    {
+        background-color: lightgreen;
+        width:400px;
+        margin:20px;
+        font-size: 22px;
+        padding:20px;
+        border-radius:20px;
+        box-shadow:0 0 10px black;
+    }
+</style>
+</head>
+<body>
+    <div style = "background:orangered; padding:10px">
+    
+    <h2>Java Script | First 10 Natural Numbers</h2></div>
+
+    <div id="naturals_verticle"></div>
+
+    <script>
+        var results = 'First 10 Natural Numbers are:<br>'
+        var n = 1;
+        while(n<11)
+        {
+           results = results + n + "<br>";
+           console.log(results);
+           n = n+1;
+        }
+        console.log(results)
+        document.getElementById('naturals_verticle').innerHTML = results
+    </script>
+    
+</body>
+</html>
