@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body
+        {
+            margin:0px;
+        }
+        #header{
+            background:linear-gradient(45deg,black,orangered);
+            color:aquamarine;
+            padding:10px;
+        }
+        #header2{
+            margin:5px opx;
+        }
+        #mt_region{
+            background-color: aquamarine;
+            font-size: 20ps;
+            line-height:2;
+            width:300px;
+            margin:40px;
+            padding:10px;
+            border-radius:15px;
+            box-shadow: 0 0 10px black;
+        }
+    </style>
+    <body>
+        <div id="header">
+            <h2>Javs Script | Display In Console - <span id = "number">?</span></h2>
+        </div>
+
+        <div id='mt_region'></div>
+        <script>
+            var num = 10;
+            document.getElementById("number").innerHTML = num;
+
+            var res = '';
+    
+            for(var i=1;i<=10;i++){
+                var prod = num * i;
+                console.log(`${num} x ${i} = ${prod}`);
+                res += `${num} x ${i} = ${prod} <br>`
+                //console.log(num + ' x '+ i + ' = + prod);
+            }//loop
+            document.getElementById('mt_region'),innerHTML = res;
+        </script>
+        
+    
+</body>
+</html>

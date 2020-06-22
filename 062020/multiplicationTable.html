@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<style>
+    body
+    {
+        margin:0px;
+    }
+    #header{
+        background:linear-gradient(45deg,black,orangered);
+        color:aquamarine;
+        padding:10px;
+    }
+    #header2{
+        margin:5px opx;
+    }
+</style>
+<body>
+    <div id="header">
+        <h2>Javs Script | Multiplication Table of - <span id = "number">?</span></h2>
+    </div>
+    <script>
+        var num = 5;
+        document.getElementById("number").innerHTML = num;
+
+        for(var i=1;i<=10;i++){
+            var prod = num * i;
+            //console.log(`${num} x ${i} = ${prod}`)
+            console.log(num + " x " + i + " = " +prod)
+        }
+    </script>
+    
+</body>
+</html>
