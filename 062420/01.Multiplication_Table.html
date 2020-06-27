@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Multiplication Table of a Number</h2>
+    </div>
+
+    <!-- data entry section-->
+    <div id="data_entry">
+        Multiplication Table of 
+        <input type="text" id="input_number" size="5" autofocus>
+        <button onclick="printTable()">Show</button>
+    </div>
+
+    <!-- result setion-->
+    <div id="mtable_section"></div>
+
+    <script>
+        /* function definition to generate multiplicatiion Table */
+        function printTable()
+        {
+            //1. get the reference of text box
+            let inputField = document.getElementById("input_number");
+
+            //2. get the data entered in text field
+            let num = inputField.value;
+            //alert(num)
+
+            //3. logic to generate multiplication table
+            let res = '';
+            for(let i=1;i<=10;i++)
+            {
+                let p = num * i;
+                res = `${res}${num} x ${i} = ${p}<br>`;
+            }
+
+            //4. place the result in the region
+            document.getElementById('mtable_section').innerHTML = res
+        }
+    </script>
+</body>
+</html>

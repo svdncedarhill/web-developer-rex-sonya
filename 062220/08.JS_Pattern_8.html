@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background:linear-gradient(45deg,black,darkred);
+            color:white;
+            padding:10px;
+        }
+        #header h2{
+            margin:5px 0px;
+        }
+        #pattern_region{
+            margin:20px 50px;
+            font-size:20px;
+            font-family:'Arial',serif;
+            background-color:aquamarine;
+            width:200px;
+            padding:10px;
+            border-radius: 15px;
+            box-shadow:0 0 10px black;
+            line-height:2;
+        }
+    </style>
+    <title>Pattern_05</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Pattern | 08</h2>
+    </div>
+
+    <div id="pattern_region"></div>
+
+    <script>
+        let res='';
+        for(let i=1;i<10;i++)
+        {          
+          for(let j=1;j<=i;j++)
+          {
+            res=`${res}${j} `
+          }
+          res += '<br>';
+        }
+        document.getElementById('pattern_region').innerHTML = res;
+    </script>
+</body>
+</html>

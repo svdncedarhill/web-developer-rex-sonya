@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program to Generate First "n" Natural Numbers</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Natural Numbers</h2>
+    </div>
+
+    <div id="data_entry">
+        First
+        <input type ="text" id="txtNum" autofocus size=5>
+        Natural Numbers
+        <button onclick="printTable()">Find</button>
+    </div>
+
+    <div id="mtable_section"></div>
+    
+    <script>
+        function printTable()
+        {
+            let inputField = document.getElementById("txtnum");
+
+            let num = inputField.value;
+
+        let res = '';
+        for(let i=1;i<=num;i++){
+        if(i==num){
+        res = `${res}${i}`
+        }
+        else{
+            res = `${res}${i},`
+        }
+        document.getElementById('mtable_section').innerHTML = res;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Numbers</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Natural Numbers</h2>
+    </div>
+
+    <div id="data_entry">
+        First 
+        <input type="text" id="txtNum" autofocus size=5> 
+        Natural Numbers 
+        <button onclick="printNaturals()">Find</button>
+    </div>
+
+    <div id="result_region"></div>
+
+    <script>
+        function printNaturals()
+        {
+           //get the reference of Text field
+           let inputField = document.getElementById('txtNum');
+
+           //get the data entered in the text field
+           let num = inputField.value;
+
+           let res = ''
+
+           for(let i=1;i<=num;i++){
+               if(i==num){
+                res = `${res}${i}`    
+               }
+               else{
+                res = `${res}${i}, `
+               }
+           } //for
+           //console.log(res)
+           document.getElementById('result_region').innerHTML = res;
+        }//function
+    </script>
+</body>
+</html>
