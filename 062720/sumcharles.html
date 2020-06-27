@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sum of Numbers</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: gray;
+
+        }
+
+        #header {
+            background: linear-gradient(45deg, black, orange);
+            color: white;
+            padding: 10px;
+        }
+
+        #header h2 {
+            margin: 0px;
+        }
+
+        p {
+            font-size: 30px;
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id = "header">
+        <h2>Java Script| Sum of the Digits of a Number</h2>
+    </div>
+
+    <div id=content>
+        <p>Enter a Number
+            <input type=text id="input_field" size=7 autofocus>
+            <button onclick="sumof()">Find Sum</button>
+        </p>
+    </div>
+    <script>
+        function getOdds() {
+            //get the reference of the input field
+            let input_field = document.getElementById('input_field');
+
+            //get the value of input field
+            let num = input_field.value;
+        //alert(num)
+            let sum = o;
+            while(n>0)
+            {
+                let rem = n%10;
+                sum =sum + rem;
+                n= Math.floor(n10);
+            }
+            document.getElementById("input_field").innerHTML='sumof()'+sum
+        }
+    </script>
+</body>
+
+</html>

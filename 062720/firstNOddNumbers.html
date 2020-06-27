@@ -3,9 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Odd Numbers</title>
 </head>
+<style>
+    body
+    {
+        margin:0px;
+        background-color:rgba(0,0,0,0.8);
+        color:white;
+    }
+    #header
+    {
+        background:linear-gradient(45deg,black,limegreen);
+        padding:10px;
+    }
+    #header2
+    {
+        margin:opx;
+    }
+    p
+    {
+        margin:20px;
+        font-size: 20px;
+        color:yellow;
+    }
+    input,button
+    {
+        font-size:20px;
+    }
+</style>
 <body>
+    <!-- header section-->
+    <div id="header">
+        <h2>Java Script | First "n" Odd Numbers</h2>
+    </div>
+
+    <!-- data entry section-->
+    <div>
+        <p>
+            How may odd Numbers <input type="text" id="input_field" size=5 autofocus>
+            <button onclick="getOdds()">F i n d</button>
+        </p>
+    </div>
+
+    <!-- result section-->
+    <div>
+        <p id="odds" style="color:aquamarine">????
+        </p>
+    </div>
+
+    <script>
+        function getOdds()
+        {
+            //get the reference of the input field
+            let input_field = document.getElementById('input_field');
+
+            //get the value of input field
+            let num = input_field.value;
+            //alert(num)
+
+            let res = '';
+            let n = 1;
+            while(n < num*2)
+            {
+                if(n== ((num*2)-1))
+                {
+                    res = `${res}${n}`
+                }
+                else
+                {
+                    res = `${res}${n}, `
+                }
+                n = n+2;
+            }//while
+            document.getElementById('odds').innerHTML = res;
+        }//function
+    </script>
     
 </body>
 </html>

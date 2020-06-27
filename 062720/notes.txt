@@ -1,0 +1,143 @@
+( )
+[ ]
+{ }
+;
+" "
+' '
+` `
+=
+==
+let
+var
+space
+
+------------------------------------------------------------------
+
+( )		
+        1. if, for, while
+				if (condition)
+				while (condition)
+				for (initialization; condition; incrementation)
+		2. function calling
+				functionName( )
+				Ex:  console.log( )
+					   document.getElementById( )
+					   alert( )
+					   etc.
+		3. Optional:  calculations
+				10 + (2 - 3)
+				
+---------------------------------------------------------------------
+
+[ ]
+       1. array
+	   
+------------------------------------------------------------------------
+
+{ }
+		1. block
+				if (condition)
+				{
+				}
+				
+				Ex:  else { }
+				       for (...)  { }
+					   while (...)  { }
+					   etc.
+					   
+--------------------------------------------------------------------------
+
+;
+
+	statement;
+	
+	except if, switch, while, do, for
+	
+		for (....)
+		{
+			statement;
+			statement;
+			statement;
+		}
+		
+	Note: In JavaScript, ; are optional.
+	
+---------------------------------------------------------------------
+
+var xyz;		//no quotes
+literals must be quotes.
+	Ex: "it is even"
+	console.log("Harsha");
+	var a = "Harsha";
+	
+	" "  or  '  ' are same
+	
+	wrong:   "Harsha'
+	
+----------------------------------------------------------------------
+
+``
+
+var x = 10;
+`Sonya${x}`
+
+Use backtick ( ` ` ) for interpolation.
+
+----------------------------------------------------------------------------
+
+=		for assignment
+		(to store a value into a variable)
+		
+			Ex:  x = y
+			
+-------------------------------------------------------------------------------
+
+
+==  (for comparison)
+	
+			if (x == y)
+			{
+			}
+			else
+			{
+			}
+			
+-------------------------------------------------------------------------------------
+
+
+let
+var
+	- both are for declaring (creating) variable.
+	
+	var  variable = value;
+	let   variable = value;
+	
+	
+	if (condition)
+	{
+		var  variable = value; //local variable
+		let   variable = value; //block level variable
+		
+		
+	} //block level variable lifetime ends; but local variable lifetime continues.
+	..............
+	
+	
+	for (var i = 1; i <= 10; i++)
+	{
+		
+	}
+	
+	for (let i = 1; i <= 10; i++)
+	{
+	}
+	
+------------------------------------------------------------------------
+
+space
+
+	Must use only after "var" and "let".
+	In all other cases, it is optional.
+	
+	var x=10;
+	

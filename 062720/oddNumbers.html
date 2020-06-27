@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body
+{
+    margin:0px;
+    background-color:rgba(0,0,0,0.8);
+    color:white;
+}
+#header
+{
+    background:linear-gradient(45deg,black,limegreen);
+    padding:10px;
+}
+#header2
+{
+    margin:opx;
+}
+p
+{
+    margin:20px;
+    font-size: 20px;
+    color:yellow;
+}
+input,button
+{
+    font-size:20px;
+}
+</style>
+<body>
+<!-- header section-->
+<div id="header">
+    <h2>Java Script | First "n" Odd Numbers</h2>
+</div>
+
+<!-- data entry section-->
+<div>
+    <p>
+        How may odd Numbers <input type="text" id="input_field" size=5 autofocus>
+        <button onclick="getOdds()">F i n d</button>
+    </p>
+</div>
+
+<!-- result section-->
+<div>
+    <p id="odds" style="color:aquamarine">????
+    </p>
+</div>
+
+<script>
+    function getOdds()
+    {
+        //get the reference of the input field
