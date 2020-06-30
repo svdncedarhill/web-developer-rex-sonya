@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a Number</title>
+</head>
+<style>
+    body
+    {
+        margin:0px;
+        background-color:rgba(0,0,0,0.4);        
+    }
+    #header
+    {
+        background:linear-gradient(45deg,black,limegreen);
+        padding:10px;
+        color:white;
+    }
+    #header h2
+    {
+        margin:0px;
+    }
+    p, input,#rev_number
+    {
+        margin:20px;
+        font-size: 20px;
+    }
+    </style>
+<body>
+    <div id="header">
+        <h2>Java Script | Reverse a Number</h2>
+    </div>
+
+    <div> 
+        <p>
+            Enter a Number
+            <input type="text" id ="input_number" size =5 autofocus onblur="reverseNumber(this.value)">
+            <span id="rev_number">_____</span>
+        </p>
+    </div>
+
+    <script>
+        function reverseNumber(num)
+        {
+            let rev = 0;
+            while(num>0)
+            {
+                let rem = num%10;
+                rev = rev * 10+ rem;
+                num = Math.floor(num/10)
+            }
+            document.getElementById('rev_number').innerHTML = rev
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Program to find the sum of digits of a Number; this is just another way by using onblur</title>
+</head>
+<style>
+    body
+    {
+        margin:0px;
+        background-color:rgba(0,0,0,0.8);
+        color:white;
+    }
+    #header
+    {
+        background:linear-gradient(45deg,black,limegreen);
+        padding:10px;
+    }
+    #header h2
+    {
+        margin:0px;
+    }
+    p
+    {
+        margin:20px;
+        font-size: 20px;
+        color:yellow;
+    }
+    input,button
+    {
+        font-size:20px;
+    }
+    </style>
+<body>
+    <div id="header">
+        <h2>Java Script | Sum of Digits of a Number</h2>
+    </div>
+
+    <div id="data_entry">
+        <p>
+            Enter a Number <input type="text" id="input_number" size=5 autofocus
+            onblur="sumOfDigits(this.value)">
+        </p>
+    </div>
+
+    <div>
+        <p id="sum_of_digits">???</p>
+    </div>
+    <script>
+        function sumOfDigits(n)
+        {
+           let sum = 0
+           while(n > 0)
+            {
+                let rem = n%10;
+                sum = sum + rem;
+                n = Math.floor(n/10);
+            }
+            document.getElementById('sum_of_digits').innerHTML = 'SUM = '+ sum
+        }
+    </script>
+    
+</body>
+</html>
