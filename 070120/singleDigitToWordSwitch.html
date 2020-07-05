@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Word Switch</title>
+</head>
+<body>
+   <div id="data_entry">
+        <p>
+            Enter a Number <input type="text" id="input_number" size=5 autofocus
+            onblur="convertToWord(this.value)"><button onclick="findSum()">Convert To Word</button>
+        </p>
+    </div>
+
+    </div>
+    <script>
+        let n = 7
+        switch(n)
+        {
+            case 0:
+            console.log('ZERO');
+            break;
+            case 1:
+            console.log('ONE');
+            break;
+            case 2:
+            console.log('TWO');
+            break;
+            case 3:
+            console.log('THREE');
+            break;
+            case 4:
+            console.log('FOUR');
+            break;
+            case 5:
+            console.log('FIVE');
+            break;
+            case 6:
+            console.log('SIX');
+            break;
+            case 7:
+            console.log('SEVEN');
+            break;
+            case 8:
+            console.log('EIGHT');
+            break;
+            case 9:
+            console.log('NINE');
+            break;
+            default:console.log(n + 'is not a single digit number')
+        }
+    </script>
+    
+</body>
+</html>

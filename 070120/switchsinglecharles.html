@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to word </title>
+</head>
+
+<body>
+    <div id=content>
+        <p>Enter a single Digit
+            <input type=text id="input_field" size=5 autofocus>
+            <button onclick="convert()">Convert To Word</button></p>
+    </div>
+    <div>
+        <p id="digit"></p>
+    </div>
+    <script>  
+        function convert() {
+			let n = document.getElementById('input_field').value;
+			
+			n = parseInt(n); //to convert a string to number
+			
+            let word;
+            switch (n) {
+                case 0: 
+				    word ='zero';
+                    break;
+                case 1: 
+ 			        word ='one';
+                    break;
+                case 2: 
+				    word ='two';
+                    break;
+                case 3: 
+				    word ='three';
+                    break;
+                case 4: 
+				     word = 'four';
+                    break;
+                case 5: 
+				     word ='five';
+                    break;
+                case 6: 
+				     word ='six';
+                    break;
+                case 7: 
+				     word ='seven';
+                    break;
+                case 8: 
+				    word ='eight';
+                    break;
+                case 9: 
+				    word ='nine';
+					break;
+				default:
+				   word='not getting'
+            }
+            document.getElementById("digit").innerHTML = word;
+            console.log(word)
+        }
+
+    </script>
+</body>
+
+</html>
