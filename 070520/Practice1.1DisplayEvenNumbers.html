@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display "n" Even Numbers</title>
+</head>
+<body>
+    <div> 
+        <h4> Display "n" Even Numbers</h4>
+    </div>
+
+    <div id ="header"> 
+        <h2>Java Script | Even Numbers</h2>
+    </div>
+
+    <div id="data_entry">
+        First
+        <input type = "text" id="input_num" autofocus size=5>
+        Even Numbers
+        <button onclick="getEvenNumbers()">Find</button>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        function getEvenNumbers()
+        {
+            let input_num = document.getElementById('input_num');
+        
+            let n = input_num.value;
+
+            let result = ''
+
+            let count = 1
+            while(count <= n)
+            {
+                result= result+(count*2)+", ";
+                count++;
+            }//while close
+            document.getElementById('output').innerHTML = result
+        }//function close
+    </script>
+</body>
+</html>

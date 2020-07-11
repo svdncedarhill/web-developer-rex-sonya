@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Digit Number to Word</title>
+    <style>
+        body
+        {
+            margin:0px;
+            background-color:rgba(0,0,0,0.4);        
+        }
+        #header
+        {
+            background:linear-gradient(45deg,black,limegreen);
+            padding:10px;
+            color:white;
+        }
+        #header h2
+        {
+            margin:0px;
+        }
+       
+        </style>
+    <body>
+        <div id="header">
+            <h2>Java Script | Convert a Single Digit Number to Word</h2>
+        </div>
+
+        <div id="data entry">
+            <p>
+                Enter a Single Digit Number <input type="text" id="txtNum" size="5" autofocus maxlength="1" onblur="convertToWord(this.value)"> 
+                
+                <span id="result" style="color:blue;font-size:24px"> _____ </span>
+            </p>
+        </div>
+
+        <script>
+            function convertToWord(n)
+            {
+                let word = '';
+                n=parseInt(n);
+
+                if (isNaN(n))
+                {
+                    word = 'Please provide a number as input'
+                }//if close
+                else
+                {
+                    switch(n)
+                    {
+                        case 0:
+                            word='ZERO';
+                            break;
+                        case 1:
+                            word='ONE';
+                            break;
+                        case 2:
+                            word='TWO';
+                            break;
+                        case 3:
+                            word='THREE';
+                            break;
+                        case 4:
+                            word='FOUR';
+                            break;
+                        case 5:
+                            word='FIVE';
+                            break;
+                        case 6:
+                            word='SIX';
+                            break;
+                        case 7:
+                            word='SEVEN';
+                            break;
+                        case 8:
+                            word='EIGHT';
+                            break;
+                        case 9:
+                            word='NINE';
+                            break;
+                    }//switch close
+                }//else close
+                document.getElementById('result').innerText=word
+            }//function close
+        </script>
+
+</head>    
+</body>
+</html>

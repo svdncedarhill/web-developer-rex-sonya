@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert To Word</title>
+</head>
+<style>
+    div
+    {
+        width:50%;
+        background:linear-gradient(45deg, darkslategray, blueviolet);
+        padding:10px;
+        border-radius: 10px;
+        color:yellow;
+        text-align: center;
+        margin:20px auto;
+        box-shadow: 0 0 10px black;
+        font-size: 20px;
+    }
+    input, button
+    {
+        font-size: 20px;
+    }
+    button
+    {
+        background:linear-gradient(to right, black, darkred, black);
+        color:white;
+        border-radius: 15px;
+        font-size: 18px;
+        padding:5px 20px;
+        border:none;
+    }
+    button:hover
+    {
+        box-shadow: 0 0 10px white;
+    }
+    input:focus
+    {
+        background-color: yellow;
+    }
+
+</style>
+<body>
+    <div>
+        Enter a Number
+
+        <input type = "text" id= "input_num"autofocus size = "10">
+        <button>Convert To Word</button>
+
+        <p id = "num_to_word">???</p>
+    </div>
+
+   <script>
+       function ConvertToWord(n)
+       {
+           let word = '';
+           n=parseInt(n);
+
+            input_num = parseInt(input_num)
+            alert(input_num)
+       }
+   </script> 
+    
+</body>
+</html>

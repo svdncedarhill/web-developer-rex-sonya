@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- internal styles-->
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background-color:cornflowerblue;
+            padding:15px;
+        }
+        #header h2{
+            margin:0px
+        }
+        #data_entry, #even_output{
+            width:50%;
+            margin:50px auto;
+            box-shadow:0 0 10px black;
+            padding:10px;
+            border-radius:15px;
+            text-align:center;
+            font-size:20px;
+            background:linear-gradient(45deg,darkslategray,lightgreen);
+        }
+        input{
+            font-size:20px;
+        }
+    </style>
+    <title>Even Numbers</title>
+</head>
+<body>
+    <!-- header section -->
+    <div id="header">
+        <h2>Java Script | Even Numbers Between</h2>
+    </div>
+
+    <!-- data entry section-->
+    <div id="data_entry">        
+            Even Numbers between 
+            <input type="text" id="first_no" size="5" autofocus> and 
+            <input type="text" id="second_no" size="5"> 
+            <input type="button" value="S h o w" onclick="findEvens()">                
+    </div>
+
+    <!-- output section-->
+    <div id="even_output"></div>
+
+    <script>
+        function findEvens()
+        {
+          //get the field values
+          let fno = document.getElementById('first_no').value;
+          let sno = document.getElementById('second_no').value;
+
+          //convert data to int type
+          fno = parseInt(fno);
+          sno = parseInt(sno);
+          
+          let res = '';
+
+          if (fno < sno)
+        {
+          let rem = fno % 2;  
+          if(rem == 0){
+            fno = fno + 2;
+          }//if close
+          else{
+            fno = fno + 1;
+          }//else close
+          
+          while(fno < sno)
+          {
+              if(res.length <= 0)
+              {
+                  res = fno;
+              }//if close
+              else
+              {
+                  res = `${res}, ${fno}`
+              }//else close
+
+              fno = fno + 2;
+          }//while close
+        }//if close
+        else
+        {
+            res = 'First number should be < the second number';
+        }
+        //show the result in the result region
+        document.getElementById('even_output').innerHTML = res;
+        }//function end
+    </script>
+</body>
+</html>

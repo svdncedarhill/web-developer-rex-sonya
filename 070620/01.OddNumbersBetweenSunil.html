@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- internal styles-->
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background-color:cornflowerblue;
+            padding:15px;
+        }
+        #header h2{
+            margin:0px
+        }
+        #data_entry, #odd_output{
+            width:50%;
+            margin:50px auto;
+            box-shadow:0 0 10px black;
+            padding:10px;
+            border-radius:15px;
+            text-align:center;
+            font-size:20px;
+            background:linear-gradient(45deg,darkslategray,lightgreen);
+        }
+        input{
+            font-size:20px;
+        }
+    </style>
+    <title>Odd Numbers</title>
+</head>
+<body>
+    <!-- header section -->
+    <div id="header">
+        <h2>Java Script | Odd Numbers Between</h2>
+    </div>
+
+    <!-- data entry section-->
+    <div id="data_entry">        
+            Odd Numbers between 
+            <input type="text" id="first_no" size="5" autofocus> and 
+            <input type="text" id="second_no" size="5"> 
+            <input type="button" value="S h o w" onclick="findOdds()">                
+    </div>
+
+    <!-- output section-->
+    <div id="odd_output"></div>
+
+    <script>
+        function findOdds()
+        {
+          //get the field values
+          let fno = document.getElementById('first_no').value;
+          let sno = document.getElementById('second_no').value;
+
+          //convert data to int type
+          fno = parseInt(fno);
+          sno = parseInt(sno);
+          
+          let res = '';
+
+          if (fno < sno)
+        {
+          let rem = fno % 2;  
+          if(rem == 0){
+            fno = fno + 1;
+          }//if close
+          else{
+            fno = fno+2;
+          }//else close
+          
+          while(fno < sno)
+          {
+              if(res.length <= 0)
+              {
+                  res = fno;
+              }//if close
+              else
+              {
+                  res = `${res}, ${fno}`
+              }//else close
+
+              fno = fno + 2;
+          }//while close
+        }//if close
+        else
+        {
+            res = 'First number should be less than the second one';
+        }
+        //show the result in the result region
+        document.getElementById('odd_output').innerHTML = res;
+        }//function end
+    </script>
+</body>
+</html>

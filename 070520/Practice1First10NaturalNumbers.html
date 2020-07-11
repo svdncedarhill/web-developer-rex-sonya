@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First 10 Natural Numbers</title>
+    <style>
+        body
+        {
+            margin:0px;
+        }
+
+        h2
+        {
+            margin:0;
+            background-color: orangered;
+        }
+        #script
+        {
+            width: 350px;
+            background:linear-gradient(45deg, darkslategray, blueviolet);
+            Padding:20px;
+            color:white;
+            border-radius: 20px;
+            box-shadow: 0 0 10px black;
+            margin: 30px;
+            font-size: 22px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div>
+        <h2> Java Script | First 10 Natural Numbers</h2>
+    </div>
+    
+    <div id="script"></div>
+   
+    <script>
+        let res = 'First 10 Natural Numbers are:<br>';
+        let n = 1;
+        while(n<11)
+        {
+           if(n==10)
+           {
+               res = res +n
+           }
+           else
+           {
+               res = res + n + ", "
+           }
+        n = n+1;
+        }
+        console.log(res)
+        document.getElementById('script').innerHTML = res
+        
+    </script>
+    
+</body>
+</html
