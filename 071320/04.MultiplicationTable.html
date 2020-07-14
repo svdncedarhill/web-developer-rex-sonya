@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            text-align:center;
+            font-size:20px;
+        }
+        div{
+            margin-top:30px;
+        }
+        input{
+            font-size:20px;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <div id="data_entry">
+        Which Number's Multiplication Table 
+        <input type="text" size=5 autofocus id="input_number" onblur="printTable(this.value)">
+    </div>
+
+    <div id="mt_region">????</div>
+
+    <script>
+        function printTable(num)
+        {                       
+          num = parseInt(num);
+          //alert(num+" - "+typeof(num))  
+
+          //get reference of result region
+          let result_region = document.getElementById('mt_region');
+
+          if(isNaN(num)){
+              result_region.innerText = 'Please enter a valid number';
+              result_region.style.color='red'
+          } //if close
+          else{
+              //logic to generate multiplication logic
+              let res = ''
+              for(let i=1;i<=10;i++){
+                  let p = num * i;
+                  res = `${res}${num} x ${i} = ${p}<br>`;
+              } //for loop close
+              
+              result_region.innerHTML = res;
+              result_region.style.color='blue';
+          }//else close
+        }//function close
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Numbers</title>
+</head>
+<style>
+body{
+ margin:0px;
+}
+#dataEntry
+{
+    margin:30px auto;
+    background: linear-gradient(45deg, darkslategray, blueviolet);
+    width: 700px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    color: white;
+}
+#header
+{
+    margin:0px;
+    background-color: blue;
+    padding: 10px;
+    color:white;
+}
+#header h2{
+	margin:0px;
+}
+
+button
+{
+    border:none;
+    background: linear-gradient(45deg, black, blue, black);
+    color:white;
+    font-weight: bolder;
+	border-radius:15px;
+	padding:8px 30px;
+	outline:none;
+}
+button:hover{
+   box-shadow: 0 0 10px white;
+}
+input, button, #res_region
+{
+    font-size: 22px;
+}
+</style>
+<body>
+    <div id="header">
+        <h2> Java Script | Natural Numbers Between X & Y</h2>
+    </div>
+   
+    <div id = dataEntry>
+    Natural Numbers between 
+        <input type = "text" id="fnum" autofocus size ="10"> and
+        <input type = "text" id="snum" size="10">
+		<br><br>
+        <button onclick="displayNaturalNum()"> Display </button>
+        
+    </div>
+
+    <div id="res_region"> </div>
+
+<script>
+    function displayNaturalNum()
+    {    
+		 //get both the text field values
+		 let x = document.getElementById("fnum").value;
+         let y = document.getElementById("snum").value;
+
+		 //convert text field values to int type
+		 x = parseInt(x);  
+		 y = parseInt(y);		
+
+         let res = '';
+		 
+		 x=x+1;
+
+		 while(x<y)
+		 {
+		   res = `${res}${x}, `;
+		   x = x+1;
+		 }//while close
+
+         /*
+         for(x=x+1; x<y; x++)
+		 {
+			res = `${res}${x}, `			
+		 } //for close
+         */
+
+
+		 //show the result
+         document.getElementById('res_region').innerHTML = res;          
+
+    }//function close
+
+
+</script>
+</body>
+</html>

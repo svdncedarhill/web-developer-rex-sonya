@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Number's Multiplication Table</title>
+</head>
+<style>
+    body
+    {
+        text-align:center;
+        font-size: 20px;
+    }
+    div
+    {
+        margin-top: 30px;
+    }
+    input
+    {
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div id = "data_entry">
+    Which Number's Multication Table
+        <input type = "text" id = "data" autofocus size=5>
+        <br>
+    </div>
+
+    <div id = "output">?????</div>
+    <script>
+        function printTable(num)
+        {
+            num = parseInt(num);
+
+            let result_region = document.getElementById('output');
+
+            if(isNaN(num))
+            {
+                result_region.innerText = 'Please enter a valid number';
+                result_region.style.color='red'
+            }//if close
+            else
+            {
+                let res = ''
+                for(let a=1;1<=10;a++)
+                {
+                    let b = num * a;
+                    res = `${res}${num} x ${a} = ${b}<br>`;
+                }//for close
+                result_region.innerHTML = res;
+                result_region.style.color='blue'
+            }//else close
+        }//function close
+    </script>
+    
+</body>
+</html>

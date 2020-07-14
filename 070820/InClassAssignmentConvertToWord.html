@@ -46,20 +46,68 @@
         Enter a Number
 
         <input type = "text" id= "input_num"autofocus size = "10">
-        <button>Convert To Word</button>
+        <button onclick="convertToWord()">Convert To Word</button>
 
-        <p id = "num_to_word">???</p>
+        <p id ='num_to_word'>???</p>
     </div>
 
    <script>
-       function ConvertToWord(n)
+       function convertToWord()
        {
-           let word = '';
-           n=parseInt(n);
+           let text_field = document.getElementById('input_num');
+           let num = text_field.value;
 
-            input_num = parseInt(input_num)
-            alert(input_num)
-       }
+           num = parseInt(num);
+
+           if(!isNaN(num))
+           {
+            let word = '';
+
+            while(num > 0)
+            {
+                rem = num % 10;
+                switch (rem)
+                {
+                    case 0:
+                        word = 'ZERO ' + word 
+                        break;
+                    case 1:
+                        word = 'ONE ' + word 
+                        break;
+                    case 2:
+                        word = 'TWO ' + word 
+                        break;
+                    case 3:
+                        word = 'THREE ' + word 
+                        break;
+                    case 4:
+                        word = 'FOUR ' + word 
+                        break;
+                    case 5:
+                        word = 'FIVE ' + word 
+                        break;
+                    case 6:
+                        word = 'SIX ' + word 
+                        break;
+                    case 7:
+                        word = 'SEVEN ' + word 
+                        break;
+                    case 8:
+                        word = 'EIGHT ' + word 
+                        break;
+                    case 9:
+                        word = 'NINE ' + word 
+                        break;        
+                }//switch close
+                num = Math.floor(num/10);
+            }//while close
+            document.getElementById('num_to_word').innerHTML =word;
+           }//if close
+           else
+           {            
+            document.getElementById('num_to_word').innerHTML ='Please enter a valid number';
+           }//else close          
+       }//function close
    </script> 
     
 </body>
