@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays In Class Assignment</title>
+</head>
+<body>
+    <h1> Arrays: List of States</h1>
+    <script>
+        var states = ["Texas", "Georgia", "Flordia", "New York", "Washington"];
+        console.log("states")
+        for (i = 0; i < states.length; i++)
+        {
+            console.log(states [i]);
+        }
+
+        console.log("reverse of array:");
+        for (let i = states.length - 1; i >= 0; i--)
+        {
+            console.log(states [i]);
+        }
+
+        console.log("first half:");
+        for (let i = 0; i < states.length / 2; i++)
+        {
+            console.log(states[i]);
+        }
+
+        console.log("second half:");
+        for (let i = states.length / 2; i < states.length; i++)
+        {
+            console.log(states[i]);
+        }
+
+        console.log("first half in reverse");
+        for (let i = Math.round(states.length / 2); i >= 0; i--)
+        {
+            console.log(states[i]);
+        }
+    </script>
+</body>
+</html>
