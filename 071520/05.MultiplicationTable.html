@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+            background-image:url('../images/background-1.jpg');
+        }
+        #header{
+            background:linear-gradient(45deg,black, orangered);
+            color:white;
+            padding:10px;
+        }
+        #header h2{
+            margin:0px;
+        }
+        #data_entry, #mt_region{
+            font-size:22px;
+            text-align:center;
+            margin:50px 0px;
+        }
+        input,button{
+            font-size:20px;
+        }
+        .btn{
+            border:1px solid black;
+            padding:3px 15px;            
+            background:transparent;
+            border-radius:20px;
+        }
+        .btn:hover{
+            background:linear-gradient(45deg,black 50%,darkred 50%);
+            color:white;
+            border:none;
+            box-shadow:0 0 10px black;
+        }
+    </style>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <!-- header section-->
+    <div id="header">
+        <h2>Java Script | Multiplication Table</h2>
+    </div>
+
+    <!-- data entry section-->
+    <div id="data_entry">
+        Which Number's  Multiplication Table 
+        <input type="text" size=5 autofocus id="input_num">
+        <button class="btn" onclick="printTable()">F i n d</button>
+    </div>
+
+    <!-- result region section-->
+    <div id="mt_region">???</div>
+
+    <script>
+        function printTable()
+        {
+         let inputField = document.getElementById('input_num');
+         let num = inputField.value;
+
+         num = parseInt(num); 
+         
+         if(isNaN(num)){
+             document.getElementById('mt_region').innerHTML = 'Invaid Number';
+         } //if
+         else{
+             let res = '';
+             i=1;
+             while(i<=10){
+                 let p = num * i;
+                 res = `${res}${num} x ${i} = ${p}<br>`;
+                 i=i+1;
+             } //loop
+             document.getElementById('mt_region').innerHTML = res;
+         }//else
+        }//function
+    </script>
+</body>
+</html>
