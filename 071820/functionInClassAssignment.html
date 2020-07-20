@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    Function to Calcualte sum of 'N' Natural Numbers
+    n = 5
+    sum = 1 + 2 + 3 + 4 + 5
+
+    <script>
+        var n = 5;
+        var sum = 0;
+        for (let i = 1; i <= n; i++)    
+        {
+
+            sum = sum + i;
+        }
+        console.log(sum);
+    </script>
+
+    <script>
+        //use above code or this one
+
+        function sumOfNatural(n)
+        {
+            var sum = 0;
+            for (let i = 1; i <= n; i++)
+            {
+                sum = sum + i;
+            }
+            console.log(sum);
+        }
+
+        sumOfNatural(5);
+
+    </script>
+    
+</body>
+</html>

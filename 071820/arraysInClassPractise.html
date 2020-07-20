@@ -3,37 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arrays In Class Assignment</title>
+    <title>Arrays In Class Practise</title>
 </head>
 <body>
     <h1> Arrays: List of States</h1>
     <script>
         var states = ["Texas", "Georgia", "Flordia", "New York", "Washington"];
-        console.log("states")
+        console.log("Array of states:")
         for (i = 0; i < states.length; i++)
         {
             console.log(states [i]);
         }
 
-        console.log("reverse of array:");
+        console.log("Reverse of Array:");
         for (let i = states.length - 1; i >= 0; i--)
         {
             console.log(states [i]);
         }
 
-        console.log("first half:");
+        console.log("First Half of Array:");
         for (let i = 0; i < states.length / 2; i++)
         {
             console.log(states[i]);
         }
 
-        console.log("second half:");
-        for (let i = states.length / 2; i < states.length; i++)
+        console.log("Second Half of Array:");
+        for (let i = Math.round(states.length / 2); i < states.length; i++)
         {
             console.log(states[i]);
         }
 
-        console.log("first half in reverse");
+        console.log("First Half of Array in Reverse");
         for (let i = Math.round(states.length / 2); i >= 0; i--)
         {
             console.log(states[i]);
