@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- integrate an external style sheet-->
+    <link rel="stylesheet" href="calculatorSunil.css">
+
+    <title>Calculator</title>
+</head>
+<body>
+    <!-- parent container-->
+    <div id="wrapper">
+        <!-- header section-->
+        <div id="header">
+            <h2>Calculator</h2>
+        </div>
+
+        <!-- data entry and result section-->
+        <div id="calculator">
+            <input type="number" id="number_1" size=10>
+
+            <span id="operator" style="display:inline-block;width:20px"></span>
+
+            <input type="number" id="number_2" size=10>
+
+            <button class="btn">=</button>
+
+            <span id="result_region">RESULT</span>
+        </div>
+        <!-- operator buttons section-->
+        <div id="operators">
+            <button class="btn-primary" onclick="operation(this)">+</button>
+            <button class="btn-primary" onclick="operation(this)">-</button>
+            <button class="btn-primary" onclick="operation(this)">x</button>
+            <button class="btn-primary" onclick="operation(this)">/</button>
+            <button class="btn-primary" onclick="clearFields()">CLEAR</button>
+        </div>
+    </div>
+    <!-- external java script-->
+    <script src="calculatorSunil.js"></script>
+</body>
+</html>

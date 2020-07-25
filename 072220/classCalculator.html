@@ -1,0 +1,38 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator App</title>
+    <link rel="stylesheet" href="calculatorSunil.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h2> Calculator App</h2>
+        </div>
+
+        <div id="calculator">
+            <input type="number" id="number_1" size=10>
+
+            <span id="operator" style="display:inline-block;width:20px"></span>
+
+            <input type="number" id="number_2" size=10>
+
+            <button class="btn">=</button>
+
+            <span id="result_region">RESULT</span>
+        </div>
+
+        <div id ="operators">
+            <button class ="btn-primary" onclick="operation(this)">+</button>
+            <button class ="btn-primary" onclick="operation(this)">-</button>
+            <button class ="btn-primary" onclick="operation(this)">x</button>
+            <button class ="btn-primary" onclick="operation(this)">/</button>
+            <button class ="btn-primary" onclick="clearfields()">CLEAR</button>
+        </button>
+        </div>
+    </div>
+    <script src="calcutorSunil.js"></script>        
+</body>
+</html>
