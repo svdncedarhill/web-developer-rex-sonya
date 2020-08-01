@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <!--function to calcuate simple interest-->
+    <script>
+
+        var a = 10000, b = 8, c = 4;
+        var x = calculateSimpleInterest(a, b, c);
+        console.log(x); //Output: 3200
+
+        function calculateSimpleInterest(principle, rateOfInterest, noOfYears)
+        {
+            let si = principle * rateOfInterest * noOfYears / 100; return si;
+        }
+    </script>
+</body>
+</html>

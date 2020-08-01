@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Program to Find Net Salary of an Employee</title>
+</head>
+<body>
+    Objects Program to Find Net Salary of an Employee In the Month of July 2020
+    <script>
+        var hoursworked = prompt("Hours Worked");
+        var pricePerHour = prompt("Price Per Hour");
+        var wht = prompt("With Holding Tax");
+
+        var Employee = 
+        {
+            hoursworked: 175,
+            pricePerHour: 15,
+            withHoldingTax: 4.5,
+            netSalary: function()
+            {
+                var netSalary = Number(this.hoursWorked) * Number(this.pricePerHour) - Number(taxWithHolding)
+            }
+        };
+        console.log(employee.netSalary);
+        console.log(employee.grossSalary);
+        
+    </script>
+    
+</body>
+</html>

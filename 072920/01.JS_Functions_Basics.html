@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background:linear-gradient(45deg, black 50%,orangered 50%);
+            padding:10px;
+            color:white;
+        }
+        h2{
+            margin:0px;
+        }
+    </style>
+    <title>Function Basics</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script Functions</h2>
+    </div>
+
+    <script>
+     /*
+     // naturals numbers first time
+      let naturals = '';  
+      for(let i=1;i<=10;i++)
+      {
+       if(i==10)   
+          naturals = `${naturals}${i}`
+       else
+          naturals = `${naturals}${i}, `   
+      }
+      console.log(naturals)
+
+      console.log(`---------------------------`);
+      //natural numbers second time
+      naturals = '';  
+      for(let i=1;i<=10;i++)
+      {
+       if(i==10)   
+          naturals = `${naturals}${i}`
+       else
+          naturals = `${naturals}${i}, `   
+      }
+      console.log(naturals)
+
+      console.log(`---------------------------`);
+      //natural numbers third time
+      naturals = '';  
+      for(let i=1;i<=10;i++)
+      {
+       if(i==10)   
+          naturals = `${naturals}${i}`
+       else
+          naturals = `${naturals}${i}, `   
+      }
+      console.log(naturals)
+    */
+
+    //define a function to display first 10 natural numbers
+    function printNaturals()
+    {
+      let naturals = '';  
+      for(let i=1;i<=10;i++)
+      {
+       if(i==10)   
+          naturals = `${naturals}${i}`
+       else
+          naturals = `${naturals}${i}, `   
+      }
+      console.log(naturals);        
+      console.log(`-------------------------------------`);
+    } //function
+
+
+    printNaturals(); //function call
+    printNaturals(); //function call
+    printNaturals(); //function call
+    </script>
+</body>
+</html>

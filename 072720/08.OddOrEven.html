@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background-color: crimson;
+            padding:10px;
+        }
+        #header h2{
+            margin:0px;
+        }
+        #data_entry{           
+            margin:30px;
+        }
+        #result{            
+            margin:30px;
+            line-height:1.5;            
+        }
+        #data_entry, #result, input,button{
+            font-size:20px;
+        }
+    </style>
+    <title>Odd or Even</title>
+</head>
+<body>
+    <!-- header section-->
+    <div id="header">
+        <h2>Java Script | Odd or Even</h2>
+    </div>
+
+    <!-- data entry section-->
+    <div id="data_entry">
+        Enter a Number: 
+        <input type="text" size="5" autofocus id="input_field">
+        <button onclick="oddOrEven()">F i n d</button>
+    </div>
+    <hr>
+    <!--result section-->
+    <div id="result"></div> 
+
+    <script>
+        function oddOrEven()
+        {
+         //get the reference of text field   
+         let input_field = document.getElementById('input_field')   ;
+
+         //get the text field value
+         let num = input_field.value;
+         
+         //declare a variable to store the result
+         let res = '';
+
+         for(let i=1;i<=num;i++)
+         {
+           let rem = i%2;
+           if(rem == 0) {
+             res=`${res}${i} is EVEN<br>`;
+           }//if
+           else {
+             res = `${res}${i} is ODD<br>`;
+           }//else               
+         } //for 
+
+         //place the result in the result region
+         document.getElementById('result').innerHTML = res; 
+        }//function
+    </script>
+</body>
+</html>

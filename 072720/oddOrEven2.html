@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odd or Even</title>
+</head>
+<body>
+    <div id = "header">
+    <h2>JAVA SCRIPT | Odd or Even 1 -15</h2>
+    </div>
+
+    <div id="data_entry">
+        <input type="text" size="5" autofocus id="input_field">
+        <button onclick="oddOrEven()">F I N D</button>
+    </div>
+
+    <div id="results"></div>
+
+   <script>
+       function oddOrEven()
+       {
+           let input_field = document.getElementById('input_field')
+       
+       let res = "";
+        for (let x = 1; x <= input_field.value; x++)
+        {
+            let rem = x%2;
+            if (rem == 0)
+            {
+                res=`${res}${x} is EVEN <br>`;
+            }
+            else
+            {
+                res=`${res}${x} is ODD <br>`;
+            }
+            document.getElementById("results").innerHTML = res;
+        }
+
+       } 
+    </script>
+</body>
+</html>

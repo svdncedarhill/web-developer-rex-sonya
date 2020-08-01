@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            padding: 10px;
+            color: white;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+    </style>
+    <title>Function Types</title>
+</head>
+
+<body>
+    <div id="header">
+        <h2>Java Script | Function Types</h2>
+    </div>
+
+    <script>
+        //function without parameters & without return
+        function greet(){
+            console.log(`Hello Guest, Welcome to REX ACADEMY`);
+        }
+        greet();  //function call
+        
+        //function with parameter & without return
+        function greetings(name){
+            console.log(`Hello ${name}, Welcome to REX ACADEMY`);
+        }
+        greetings('Sachin'); //function call
+        greetings('Chris'); //function call
+
+        //function without parameter & with return
+        function getOTP(){
+            let otp = 9854;
+            return otp;
+        }
+        let otp_received = getOTP();
+        console.log('OTP Received = '+ otp_received);
+        console.log('OTP Received = '+ getOTP());
+        console.log(`OTP Received = ${getOTP()}`);
+
+        //function with parameters & with return
+        function addNum(x, y)
+        {
+           let s = x+y;
+           return s; 
+        }
+        let sum = addNum(11,22); //function call
+        console.log(`Sum = ${sum}`)
+        console.log('Sum = '+ addNum(23,12));
+        console.log(`Sum = ${addNum(23,34)}`);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects / Prompts</title>
+</head>
+<body>
+    <script>
+        var m = prompt("Math");
+        var p = prompt("Physics");
+        var c = prompt("Chemistry");
+    
+        var student = {
+            math: m,
+            physics: p,
+            chemistry: c,
+            totalMarks: function()
+                {
+                    var total = Number(this.math) + Number(this.physics) + Number(this.chemistry);
+                    return total;
+                }
+        };
+    
+        console.log(student.math);
+        console.log(student.physics)
+        console.log(student.chemistry)
+        console.log(student.totalMarks());
+    </script>
+
+</script>
+</body>
+</html>
