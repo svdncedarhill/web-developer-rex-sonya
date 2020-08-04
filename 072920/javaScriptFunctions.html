@@ -45,23 +45,24 @@
     <div id= "evenNumbers">Even Numbers =</div>
 
     <script>
-        function num (numbers)
+        function numSequence (firstNo, lastNo, step, region_id, message)
         {
-            let nat = '';
-            for(let i=1;i<=numbers;i++)
+            let seq = '';
+            for(let i=firstNo;i<=lastNo;i=i+step)
             {
-                if(i==numbers)
-                nat = `${nat}${i}`
+                if(i==lastNo)
+                seq = `${seq}${i}`
                 else
-                nat = `${nat}${i},`
+                seq = `${seq}${i}, `
             }
-            console.log(nat);
-            //document.getElementById("naturalNumbers").innerHTML=num(1, 10, 1);
+            console.log(seq);
+            document.getElementById(region_id).innerHTML = message+' = ' +seq
 
-        }
-        numSequence(1, 10, 1);
-        numSequence(2, 20, 2);
-        numSequence(1, 19, 2);
+        }//function end
+        //function calling
+        numSequence(1, 10, 1, "naturalNumbers", 'Natural Numbers');//to display natural numbers
+        numSequence(1, 19, 2,"oddNumbers", 'Odd Numbers');//to display odd numbers
+        numSequence(2, 20, 2, "evenNumbers", 'Even Numbers');//to display even numbers
     </script>
 </body>
 </html>

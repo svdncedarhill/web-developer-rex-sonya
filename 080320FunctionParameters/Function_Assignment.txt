@@ -1,0 +1,22 @@
+Practices - 08.03.2020
+----------------------
+1) Function definition with parameters
+
+function name - calculateDiscount - 
+      parameters - product_name, unit_price, quantity, discount_percentage
+
+default percentage discount is 10%
+
+
+calculateDiscount('Mobile',1500,1,15);
+calculateDiscount('Shirt',70,2);
+
+
+function calculateDiscount(p_name,u_price,qty,disc=10)
+{
+   O/P : Sl No | Product Name | Qty  | Unit Price | Total Cost | Discount  | Net Cost
+}
+
+---------------------------------------------------------------------------------------
+
+

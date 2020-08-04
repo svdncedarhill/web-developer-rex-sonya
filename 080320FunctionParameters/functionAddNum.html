@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameters</title>
+</head>
+<body>
+    <div id = "header">
+        <h1>Java Script | Function Parameters</h1>
+    </div>
+        
+    <div id = "display"></div>
+        <script>
+            function calculateDiscount(p_name ="", u_price=0, qty=1, disc=15)
+            {
+               let s = p_name + u_price * qty * disc;
+               console.log(`${p_name}, ${u_price}, ${qty}, ${disc} || sum = ${s} `);
+            }
+            calculateDiscount("Mobile", 1500, 1, .15)
+        </script>
+    
+</body>
+</html>

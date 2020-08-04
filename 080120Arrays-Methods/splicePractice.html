@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice Practice</title>
+</head>
+<body>
+    <h1>Splice</h1>
+    <script>
+        var participants = ["Charles", "Chris"];
+        participants.push("Jeffrey");
+        participants.splice(1, 0,"Sonya", "Sunil");
+        participants.push("Brea");
+        participants.splice(3,1);
+        console.log(participants);
+    </script>
+    
+     <script>
+        var participants = ["Charles", "Sonya", "Sunil", "Jeffery", "Brea"];
+        participants.splice(1,4);
+        participants.push("Jeffery", "Sunil", "Sonya", "Brea");        
+        console.log(participants);
+    </script>
+</body>
+</html>

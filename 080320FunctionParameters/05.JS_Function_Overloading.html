@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            padding: 10px;
+            color: white;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+    </style>    
+    <title>Function Overloading</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Function Overloading</h2>
+    </div>
+
+    <script>
+    function add(){
+        console.log(`No Parameters`);
+    }
+            
+    function add(x, y){
+        console.log('2 Parameters');
+    }    
+    //function calling
+    add(10,20);
+    add();
+    </script>
+</body>
+</html>
