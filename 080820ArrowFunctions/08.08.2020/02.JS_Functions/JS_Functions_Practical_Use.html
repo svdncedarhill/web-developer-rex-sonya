@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Functions Practical Use</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: cadetblue;
+        }
+
+        #header {
+            background-color: orangered;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        #naturalnums,
+        #evennums,
+        #oddnums {
+            background: lightgreen;
+            border-radius: 25px;
+            font-size: 20px;
+            margin-top: 30px;
+            width: 40%;
+            padding: 20px;
+            float: right;
+            box-shadow: 0 0 10px black;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">JS Functions Practical Use</div>
+
+    <div id="naturalnums">Natural Numbers =</div>
+    <div id="evennums">Even NUmbers =</div>
+    <div id="oddnums">Odd Numbers =</div>
+
+    <script>
+        function displayNums(a, b, c) {
+            let res = '';           
+            for (let i = a; i <= b; i=i+c)
+            {
+                if (i == b)
+                    res = `${res}${i}`
+                else
+                    res = `${res}${i} | `
+            }//for loop close
+
+            console.log(res); 
+            return res           
+        }//function close
+
+        //function calling
+        let res = displayNums(1, 10, 1);
+        document.getElementById(`naturalnums`).innerHTML = 'Natural Numbers = '+res;            
+
+        res = displayNums(2,20,2);
+        document.getElementById('evennums').innerHTML = 'Even Numbers = '+res
+
+        res = displayNums(1,19,2);
+        document.getElementById('oddnums').innerHTML = `Odd Numbers = ${res}`
+
+        res= displayNums(1,10);
+        console.log(res);
+    </script>
+</body>
+
+</html>

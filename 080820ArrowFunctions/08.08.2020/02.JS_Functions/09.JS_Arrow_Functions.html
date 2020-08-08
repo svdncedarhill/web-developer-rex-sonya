@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+
+        #header h2 {
+            margin: 5px 0px;
+        }
+    </style>
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <nav id="header">
+        <h2>Java Script | Arrow Functions | Print n Natural Numbers</h2>
+    </nav>
+
+    <script>
+        let printNaturals = (n) => {
+            console.log(`First ${n} Natural Numbers are: `);
+            let res = ''
+            for(let i=1;i<=n;i++)
+            {
+              if(i == 1)
+               res = 1;
+              else   
+               res = res + ', '+ i      
+            }//for
+            console.log(res);
+        }       
+        printNaturals(10); //function call
+       // printNaturals(5);
+       // printNaturals(20);
+    </script>
+</body>
+
+</html>

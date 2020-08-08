@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            padding: 10px;
+            color: white;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+    </style>    
+    <title>Function Expression</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Function Expressions</h2>
+    </div>
+
+    <script>
+     let sum = function addNum(x=0,y=0)
+        {
+         let s = x + y;
+         console.log(`${x} + ${y} = ${s}`);   
+        }
+        console.log('Data Type of sum = ' + typeof(sum)); //function
+        //function calling
+        sum(10,20);
+        sum('REX', ' ACADEMY')
+    </script>
+
+    <script>
+        //anonymous function
+        let add = function(x=0,y=0){
+            let s = x + y;
+            return s;
+        }
+
+        console.log('Sum = '+ add(5,4));
+
+        let res = add('REX', '100');
+        console.log(res);
+    </script>
+</body>
+</html>

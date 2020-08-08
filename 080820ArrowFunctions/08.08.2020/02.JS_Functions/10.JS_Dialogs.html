@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+
+        #header h2 {
+            margin: 5px 0px;
+        }
+        #wrapper{
+            margin:50px;
+            text-align:center;
+        }
+        button{
+            width:250px;
+            font-size:20px;
+            padding:10px;
+            margin-right:30px;
+            border:none;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+            border-radius:25px 0px 25px 0px;
+        }
+        button:hover{
+            box-shadow:0 0 10px limegreen;
+        }
+    </style>
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <nav id="header">
+        <h2>Java Script | Dialogs</h2>
+    </nav>
+
+    <div id="wrapper">
+        <button onclick="showMessage()">Message Dialog</button>
+        <button onclick="confirmDialog()">Confirmation Dialog</button>
+        <button onclick="enterOTP()">Input Dialog</button>
+    </div>
+    <script>
+        /*
+        function showMessage(){
+            alert('Welcome to REX ACADEMY');
+        }
+        */
+        let showMessage = () => {
+            alert('Welcome to REX ACADEMY');
+        }
+    </script>
+    <script>
+        let confirmDialog = () =>{
+            let status = confirm('Do you want to close the Application?')
+            console.log(status);
+            if(status)
+              console.log('Closing the Application');
+            else
+              console.log('Not closing the Application Now');  
+        }
+    </script>
+
+    <script>
+        /*
+        function enterOTP(){
+            let otp = prompt("Enter OTP:","0000")
+            console.log('OTP = '+ otp)
+        }
+        */
+        let enterOTP = () => {
+            let otp = prompt("Enter OTP:","0000")
+            console.log('OTP = '+ otp)            
+        }
+    </script>
+</body>
+
+</html>

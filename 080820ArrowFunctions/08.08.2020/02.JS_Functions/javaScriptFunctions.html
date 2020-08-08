@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Function | Practical Use</title>
+<style>
+    body
+    {
+        margin:0px;
+        background:#474196
+    }
+    #header
+    {
+        background:linear-gradient(45deg, black, orangered);
+        color:white;
+        padding:10px;
+    }
+    h2
+    {
+        margin:0px;
+    }
+    #naturalNumbers, #oddNumbers, #evenNumbers
+    {
+    background:limegreen;
+    border-radius: 25px;
+    margin:auto;
+    border:1px black;
+    box-shadow: 0 0 10px black;
+    font-size: 20px;
+    margin-top: 20px;
+    width:800px;
+    padding:10px;
+    }
+
+</style>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script Function | Practical Use</h2>
+    </div>
+
+    <div id="naturalNumbers">Natural Numbers =</div>
+    <div id="oddNumbers">Odd Numbers =</div>
+    <div id="evenNumbers">Even Numbers =</div>
+
+    <script>        
+        function numSequence(firstNo, lastNo, step)
+        {
+            let seq = '';
+            for(let i=firstNo;i<=lastNo;i=i+step)
+            {
+                if(i==lastNo)
+                  seq = `${seq}${i}`                  
+                else
+                  seq = `${seq}${i}, `                  
+            }
+            //console.log(seq);  
+            return seq;             
+        }//function end
+
+        //function calling
+        let result = numSequence(1, 10, 1); //to display natural numbers
+        document.getElementById('naturalNumbers').innerHTML = 'Natural Numbers = '+ result;
+
+        result = numSequence(1,19,2); //to display odd numbers
+        document.getElementById('oddNumbers').innerHTML = 'Odd Numbers = '+ result;
+
+        result = numSequence(2,20,2); //to display even numbers
+        document.getElementById('evenNumbers').innerHTML = `Even Numbers = ${result}`
+    </script>
+</body>
+</html>

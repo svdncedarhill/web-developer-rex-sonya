@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+    </style>
+    <title>Object Basics</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Object | Basics</h2>
+    </div>
+
+    <script>
+        /*create an empty object*/
+        let emp = {};
+        console.log(emp);
+        console.log('Data Type of emp = '+ typeof(emp));
+
+        /*to assign property and values to an object*/
+        emp.empNo = 101;
+        emp.empName = 'Sunil';
+        emp['empSal'] = 25000;
+        console.log(emp); 
+
+        /*to access the properties and values of an object*/
+        console.log(`Approach -1 || using dot (.) operator`);
+        console.log(`Emp No = ${emp.empNo}`);
+        console.log('Emp Name = '+ emp.empName);
+        console.log(`Emp Salary = ${emp.empSal}`);
+        
+        console.log(`----------------------------------------`)
+
+        console.log(`Approach -2 || using brackets []`);
+        console.log(`Emp No = ${emp['empNo']}`);
+        console.log('Emp Name = '+ emp['empName']); 
+        console.log(`Emp Salary = ${emp['empSal']}`)  
+
+        console.log(`----------------------------------------`)
+        /*accessing a non-existing property of an object*/
+        console.log(emp.empDesignation); //undefined
+        console.log(emp['empDesignation']) //undefined
+        
+        console.log(`----------------------------------------`)
+
+        /*to understand the difference between dot and brackets while accessing the property of an object*/
+        let prop = 'empName';
+        console.log(emp[prop]); //Sunil
+        console.log(emp.prop); //undefined
+    </script>
+</body>
+</html>

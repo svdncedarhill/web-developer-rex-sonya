@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin:0px;
+            }
+            #header{
+                background: linear-gradient(45deg, black 50%, orangered 50%);
+                padding: 10px;
+                color: white;
+            }
+            h2{
+                margin: 0px;
+            }
+        </style>
+        <title>Arrow Functions</title>
+    </head>
+    <body>
+        <div id="header">
+            <h2>Java Script Function Types</h2>
+        </div>  
+
+
+    <script>
+        let product = (x=1,y=1,z=1) => {
+            let p= x*y*z;
+            console.log(`${x} * ${y} * ${z} = ${p}`);
+        }
+
+        product(10,20,30);
+        product(1,2,4)
+        product(7,2);
+        product();
+    </script>
+    
+</body>
+</html>

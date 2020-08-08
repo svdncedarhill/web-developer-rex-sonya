@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background:linear-gradient(45deg,black 50%, orangered 50%);
+            color:white;
+            padding:10px;
+        }
+        #header h2{
+            margin:5px 0px;
+        }
+    </style>
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | Arrow Functions</h2>
+    </nav>
+
+    <script>
+        /*
+        //1)function definition
+        function greet(){
+            console.log('Welcome to REX ACADEMY');
+        }
+        */
+        
+        /*
+        //2) function expression
+        let greet = function(){
+            console.log('Welcome to Softwave IT Solutions');
+        }
+        */
+
+        //3) arrow function- a new feature of Java Script (ES6)
+        let greet = () => {
+            console.log('Welcome to REX ACADEMY');
+        }
+
+        greet(); //function call
+    </script>
+
+    <script>
+        let sum = (x=0,y=0) => {
+            let s = x+y;
+            console.log(`${x} + ${y} = ${s}`);
+        }
+
+        sum(10,20); //function call
+        sum(4,10);
+        sum(23);
+    </script>
+</body>
+</html>

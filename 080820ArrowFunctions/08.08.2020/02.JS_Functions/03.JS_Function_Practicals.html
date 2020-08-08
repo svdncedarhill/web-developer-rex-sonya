@@ -1,0 +1,51 @@
+<!-- display first 10 , 15, 20 naturals numbers using function-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            padding: 10px;
+            color: white;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+    </style>
+    <title>Function Practicals</title>
+</head>
+
+<body>
+    <div id="header">
+        <h2>Java Script | Function | Display Natural Numbers using Function</h2>
+    </div>
+
+    <script>
+        function displayNaturals(endNumber)
+        {
+         let nat = '';
+         for(let i=1;i<=endNumber;i++)
+         {
+          if(i==endNumber)
+            nat=`${nat}${i}`
+          else
+            nat = `${nat}${i}, `     
+         }//for   
+         console.log(nat);
+        }//function
+
+        displayNaturals(10);
+        displayNaturals(20);
+        displayNaturals(15);
+    </script>
+</body>
+
+</html>

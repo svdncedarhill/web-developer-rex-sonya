@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+
+        #header h2 {
+            margin: 5px 0px;
+        }
+
+    </style>
+    <title>Variable Scope</title>
+</head>
+
+<body>
+    <nav id="header">
+        <h2>Java Script | Variable Scope</h2>
+    </nav>
+
+    <script>
+        let n = 10; //global variable
+        let z= 40; //global variables
+        function myFun()
+        {
+            let n = 20; //local variables
+            //var x = 30; //local variable
+            x = 30; //global variable
+            console.log(`Inside Function - ${n}, ${x}, ${z}`);            
+        }
+
+        console.log(`Outside Function - ${n}`)
+        myFun(); //function call
+        console.log(`Outside Function - ${n}`)
+    </script>
+    <script>
+        console.log(`Outside Function - ${n}, ${z}, ${x}`)
+    </script>
+</body>
+
+</html>

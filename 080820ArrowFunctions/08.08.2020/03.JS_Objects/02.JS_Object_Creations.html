@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+    </style>
+    <title>Object Creations</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Object | Creations</h2>
+    </div>
+
+    <script>
+        /*1. create an empty object*/
+        let emp1 = {};        
+        emp1.empNo = 101;
+        emp1.empName = 'Sunil';
+        emp1['empSal'] = 25000;
+        console.log(emp1); 
+
+        /*2. create an object as a literal*/
+        let emp2 = {empNo: 102, empName:'Harsha', empSal:35000};
+        console.log(emp2);
+
+        /*3. create an object using constructor*/
+        function Employee(empno,ename,sal){
+            this.empNo = empno;
+            this.empName = ename;
+            this.empSal = sal;
+        }
+
+        let emp3 = new Employee(103,'Naveen', 15000);
+        console.log(emp3);
+        let emp4 = new Employee(104,'Vamsi', 45000);
+        console.log(emp4);
+    </script>
+</body>
+</html>

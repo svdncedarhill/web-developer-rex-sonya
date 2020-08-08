@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            padding: 10px;
+            color: white;
+        }
+
+        h2 {
+            margin: 0px;
+        }
+    </style>    
+    <title>Function Expression</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Function Expressions</h2>
+    </div>
+
+    <script>
+        let calc = function(fno=0, sno=0, operator)
+        {
+            let res = '';
+            if(operator == '+'){
+                res = `Sum = ${fno+sno}`;
+            }    
+            else if(operator == '-'){
+                res = `Diff = ${fno-sno}`;
+            }
+            else if(operator == 'x'){
+                res = `Product = ${fno*sno}`;
+            }            
+            else if(operator == '/'){
+                res = `Quotient = ${fno/sno}`;
+            }            
+            else{
+                res = 'Invalid Operation'
+            }
+            console.log(res);
+        }
+    </script>
+    <script>
+        //function call
+        calc(10,20,'x');
+        calc(5,4,'+')
+        calc(45,2,'&');
+    </script>
+</body>
+</html>
