@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function Expression</title>
+</head>
+<body>
+    <script>
+    let cal = function(fno=0, sno=0, operator)
+    {
+        let res = '';
+        if(operator == '+')
+        {
+            res = `Addition = ${fno+sno}`;
+        }
+        else if (operator == '-')
+        {
+            res = `Minus = ${fno-sno}`;
+        }
+        else if(operator == 'x')
+        {
+            res = `Multiplication = ${fno*sno}`;
+        }
+        else if (operator == '/')
+        {
+            res = `Division = ${fno-sno}`;
+        }
+        else 
+        {
+            res = 'Invalid Operation'
+        }
+        console.log(res);
+    }
+    </script>
+    <script>
+       
+        calc(15,5,'+');
+        calc (20,5,'-');
+        calc (5,5,'*');
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameters</title>
+</head>
+<body>
+    <div id = "header">
+        <h1>Java Script | Function Parameters</h1>
+    </div>
+        
+    <div id = "display"></div>
+        <script>
+            function calculateDiscount(p_name ="", u_price=0, qty=1, disc=10)
+            {
+               let discount = u_price * disc/100;
+               let total_disc = discount*qty;
+               let grossCost = u_price*qty;
+               let netCost = grossCost-total_disc;
+
+               console.log(`Product Name: ${p_name} | Unit Price: ${u_price} | Quantity: ${qty} | Gross Cost: ${grossCost} | Discount: ${total_disc}(${disc}%) | Net Cost: ${netCost}`);
+            }
+
+            //function call
+            calculateDiscount("Mobile", 1500, 2, 20)
+            calculateDiscount("Laptop", 2500, 1 )
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Operator</title>
+</head>
+<body>
+    <script>
+        let sum = function(x=0, y =0, Operator)
+        {
+            let res ="";
+            if (Operator == "+"){
+                res = `sum = ${x + y}`;
+            }
+            else if (Operator == "-"){
+                res = `{diff = ${_x-y}`;
+            }
+            else if (Operator == "*"){
+                res = `product = ${x * y}`;
+            }
+            else if (Operator == "/"){
+                res = `Quotient =${x / y}`;
+            }
+            else{
+                res = "invalid Operator";
+            }
+            console.log(res)
+        }
+        sum(10,20,"+");
+        sum(10,20,"-");
+        sum(10,20,"*");
+        sum(10,20,"/");
+        sum(10,20,"&");
+        
+    </script>
+</body>
+</html>

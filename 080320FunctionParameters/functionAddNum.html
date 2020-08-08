@@ -14,8 +14,9 @@
         <script>
             function calculateDiscount(p_name ="", u_price=0, qty=1, disc=15)
             {
-               let s = p_name + u_price * qty * disc;
-               console.log(`${p_name}, ${u_price}, ${qty}, ${disc} || sum = ${s} `);
+               let totalCost = u_price - disc;
+               let mobilePhone = p_name + u_price * qty * disc;
+               console.log(`${p_name}, ${u_price}, ${qty}, ${disc} || totalCost = ${mobilePhone} `);
             }
             calculateDiscount("Mobile", 1500, 1, .15)
         </script>
