@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of America</title>
+</head>
+<body>
+
+    <div id = "header"><h2>Java Script | Bank of America</h2></div>
+    <div id = "container">
+        <input type="text" id=acctBox size = 20>
+        <br><br>
+        <button id = 'dep'>Deposit</button>
+        <button id = 'wit'>Withdrawal</button>
+        <button id = 'bal'>Balance</button>
+        <hr>
+        <p id = "results"></p>
+        <hr>
+     </div>
+    
+    <script>
+        let result_region = document.getElementById("results");
+        let acct = {
+            accNo: 123456789,
+            accName: "Sunil_Joseph",
+            accBal: 5000,
+
+            getDetails: function()
+            {
+                return `A/C No: ${this.acctNo} | ${this.accName} | ${this.accBal}`
+            },
+            deposit: function(amt)
+            {
+                this.bal= this.bal + Number (amt);
+                result_Region.innerText = `$${amt} Credited | Balance: $${this.bal}`
+            },
+
+            withdraw: function(amt)
+            {
+                if(this.bal >= amt)
+                {
+                    this.bal = this.bal - Number(amt);
+                    result_Region.innerText = `$${amt} Debited | Balance: $${this.bal}`
+                }
+                else
+                {
+                    result_Region.innerText = `Error; Insufficient Funds`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

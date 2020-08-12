@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions In Object</title>
+</head>
+<body>
+    <script>
+        let person = {
+            firstName: 'Sunil',
+            lastName: 'Joseph',
+            fullName: function()
+            {
+                return this.firstName+' '+this.lastName;
+            }
+        }
+
+        console.log(person);
+    </script>
+    <script>
+        console.log('First Name = '+ person.firstName);
+        console.log(`Last Name = ${person.lastName}`);
+        console.log('Full Name = ' + person.fullName());
+    </script>
+    <script>
+        for(let prop in person)
+        {
+            if(typeof(person[prop])=='function')
+            console.log(`${prop} = ${person[prop]()}`);
+            else
+            console.log(`${prop} - ${person[prop]}`);
+        }
+    </script>
+</body>
+</html>

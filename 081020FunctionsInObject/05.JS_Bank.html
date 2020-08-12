@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+        #container{
+            margin:50px;
+            text-align:center;
+            font-size:20px;
+        }
+        button{
+            width:150px;
+            font-size:20px;
+            border:none;
+            padding:6px;
+            background:aquamarine;
+            border-radius:15px;
+        }
+        button:hover{
+            background:maroon;
+            color:white;
+            box-shadow:0 0 10px black;
+        }
+        input{
+            font-size:20px;
+        }
+        #result{
+            color:darkblue;
+        }
+    </style>
+    <title>BANK</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | BANK</h2>
+    </div>
+    <div id="container">
+        Enter Amount 
+        <input type=text id=txtAmount size=20>
+        <br><br>
+        <button onclick="depositAmount()">Deposit</button>
+        <button onclick="withdrawAmount()">Withdraw</button>
+        <button onclick="accountDetails()">Details</button> 
+        <hr>
+         <p id="result"></p>
+        <hr>       
+    </div>
+    <script>
+        let result_region = document.getElementById('result');
+
+        let acc = {
+            acno: 100002514,
+            name: 'Sunil',
+            bal: 1000,
+
+            getDetails: function(){
+                return `A/C No: ${this.acno} | Name: ${this.name} | Balance: ${this.bal}`
+            },
+
+            deposit: function(amt){
+                this.bal = this.bal + Number(amt);
+                console.log(`$${amt} Credited | Balance: $${this.bal}`);
+                result_region.innerText = `$${amt} Credited | Balance: $${this.bal}`
+            },
+
+            withdraw: function(amt){
+                if(this.bal >= amt)
+                {
+                    this.bal = this.bal - Number(amt);
+                    console.log(`$${amt} Debited | Balance: $${this.bal}`);
+                }
+                else{
+                    console.log('ERROR: Insufficient Balance')
+                }
+            }
+        }//object close
+    </script>
+    <script>
+        function accountDetails(){
+            let details = acc.getDetails();
+            result_region.innerText = details
+        }
+
+        function depositAmount(){
+            //get reference of text field 
+            let txtAmount = document.getElementById('txtAmount');
+
+            //get text field value
+            let amt = txtAmount.value;
+
+            acc.deposit(amt);
+        }
+    </script>
+</body>
+</html>

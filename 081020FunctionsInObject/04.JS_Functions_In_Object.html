@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+    </style>
+    <title>BANK</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | BANK</h2>
+    </div>
+
+    <script>
+        let acc = {
+            acno: 100002514,
+            name: 'Sunil',
+            bal: 1000,
+
+            getDetails: function(){
+                return `A/C No: ${this.acno} | Name: ${this.name} | Balance: ${this.bal}`
+            },
+
+            deposit: function(amt){
+                this.bal = this.bal + amt;
+                console.log(`$${amt} Credited | Balance: $${this.bal}`);
+            },
+
+            withdraw: function(amt){
+                if(this.bal >= amt)
+                {
+                    this.bal = this.bal - amt;
+                    console.log(`$${amt} Debited | Balance: $${this.bal}`);
+                }
+                else{
+                    console.log('ERROR: Insufficient Balance')
+                }
+            }
+        }//object close
+    </script>
+    <script>
+        console.log(acc);
+        console.log(acc.getDetails())
+        acc.deposit(150);
+        acc.deposit(255);
+        acc.withdraw(2500);
+        acc.withdraw(1400);
+        console.log(acc.getDetails());
+    </script>
+</body>
+</html>

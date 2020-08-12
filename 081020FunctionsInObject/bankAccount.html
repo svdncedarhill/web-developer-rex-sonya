@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+</head>
+<body>
+    <script>
+        let acc = 
+        {
+            acno: 100002514,
+            name: 'Sunil',
+            bal: 1000,
+
+            getDetails: function()
+            {
+                return `A/C No: ${this.acno} | Name: ${this.name} | Balance: ${this.bal}`
+            },
+
+            deposit: function(amt)
+            {
+                this.bal = this.bal + amt;
+                console.log(`$${amt} Credited | Balance: $${this.bal}`);
+            },
+
+            withdraw: function(amt)
+            {
+                if(this.bal >= amt)
+                {}
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
