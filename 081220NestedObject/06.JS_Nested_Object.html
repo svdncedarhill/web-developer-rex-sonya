@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+    </style>
+    <title>Nested Object</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Nested Object</h2>
+    </div>
+    
+    <script>
+        //creating a nested object
+        let student = {
+            admNo: 'SIT_1542',
+            name: 'Sunil Joseph',
+            course: 'MEAN STACK DEVELOPMENT',
+            address: {
+                street:'Ameerpet',
+                city: 'Hyderabad',
+                state:'Telangana'
+            }
+        }
+    </script>
+    <script>
+        console.log(student);
+        console.log('Student Name = ' + student.name);
+        console.log('Student Name = ' + student['name']);
+
+        console.log('Student City = ' + student.address.city);
+        console.log('Student State = '+ student['address']['state']);
+        console.log(`Student Name = ${student.name}`);
+        console.log(student.address);             
+    </script>
+    <script>
+        /* object iteration */
+        console.log('STUDENT DETAILS::')
+        for(let prop in student)
+        {
+        // alert(prop+" - "+ typeof(student[prop])+" - "+student[prop])
+         if(typeof(student[prop]) != 'object')
+         {
+          console.log(prop + " = " + student[prop]);  
+         }//if
+         else{
+             console.log("- "+prop + " DETAILS:");
+             for(let p in student[prop])
+             {
+                console.log(p+" : "+student[prop][p]);
+             }//for
+         }//else
+        }//for
+    </script>
+</body>
+</html>    

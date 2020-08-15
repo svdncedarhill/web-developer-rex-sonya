@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Object</title>
+</head>
+<body>
+    <div id = "header">
+        <h2> Java Script | Nested Object</h2>
+    </div>
+    
+    <script>
+        let student = 
+        {
+            empNo: '1234',
+            name: 'Sonya Daniel',
+            course: 'MEAN STACK DEVELOPMENT',
+            address: {
+                street: 'Stonewall',
+                city: 'Cedar_Hill',
+                state: 'Texas'
+            }
+        }
+    </script>
+    <script>
+        console.log(student);
+        console.log('Student Name = ' + student.name);
+        console.log('Student Name = ' + student['name']);
+
+        console.log('Student City = ' + student.address.city);
+        console.log('Student State = ' + student['address']['state']);
+        console.log(`Student Name = ${student.name}`);
+        console.log(student.address);
+    </script>
+    <script>
+        /*object iteration*/
+        console.log('STUDENT DETAILS::')
+        for(let prop in student)
+        {
+            // alert(prop+" - "+ typeof(student[prop])+" - "+student[prop])
+         if(typeof(student[prop]) != 'object'){
+          console.log(prop + " = " + student[prop]);
+         }//if close
+         else{
+             console.log("- "+prop + " DETAILS:")
+             for(let p in student[prop])
+             {
+                 console.log(p+" = "+student[prop][p]);
+             }//for
+         }//else close
+        }//for close
+    </script>
+    
+</body>
+</html>;

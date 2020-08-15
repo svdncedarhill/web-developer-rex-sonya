@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Basic</title>
+</head>
+<body>
+    <div id= "header">
+        <h2> Java Script | Array | Basic</h2>
+    </div>
+
+    <script>
+        //create an array to store marks of a student
+        let marks = [98,82,73,90,99,80];
+        console.log('No of Subjects = '+ marks.length);
+        console.log('Data Type of marks(array) = '+ typeof(marks));
+        console.log(marks)
+        console.log(`${marks}`);
+
+        //accessing the value of an available array index
+        console.log('Mark for Subject-3 = '+ marks[2]);
+
+        //accessing the value o an unavailable array index
+        console.log(marks[6]); //undefined
+
+        /* --- array iterations --- */
+        console.log(`----- 1)array iteration using a for loop -----`)
+        for(let i=0; i < marks.length; i++)
+        {
+           // console.log('Mark for Subject-'+ (i+1) +' = ' +marks[i]);
+            console.log(`Mark for Subject- ${i+1} = ${marks[i]}`);
+        }
+    </script>
+</body>
+</html>
