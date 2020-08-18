@@ -1,0 +1,28 @@
+<script>
+let names = ['Brea', 'Charles', 'Chris', 'Jeffery', 'Sonya', 'Sunil'];
+
+console.log(`Web Development 2020 Participants`)
+//1)iteration using a normal for loop
+for(let i=0;i<names.length;i++)
+{
+ console.log('Participant - '+(i+1)+' = '+ names[i])   
+}
+console.log(`-------------------------------`)
+//2)iteration using for...in loop
+let res = ''
+for(let index in names)
+{
+  // console.log(names[index]) 
+  res = res+names[index]+', ';
+}
+console.log(res);
+
+console.log(`-------------------------------`)
+//3)iteration using for...of loop
+res=''
+for(let val of names)
+{
+  res = `${res}${val}, `
+}
+console.log(res);
+</script>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+        #wrapper
+        {
+            margin:30px;
+        }
+        #wrapper button{
+            width:200px;
+            font-size:18px;
+            padding:10px;
+            border:none;
+            border-radius:15px;
+            background:linear-gradient(45deg,#360213 50%, orangered 50%);
+            color:white;
+            margin-right:50px;
+        }
+        #wrapper button:hover{
+            box-shadow:0 0 10px black;
+        }
+        table{
+            width:400px;
+            font-size:18px;
+            margin:40px 20px;
+            border-collapse: collapse;
+        }
+        td,th{
+            border:1px solid black;
+        }
+        tr{
+            height:45px;
+        }
+    </style>
+    <title>Arrays</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Report Card</h2>
+    </div>
+    <div id="wrapper">
+        <button onclick="marksEntry()">Data Entry</button>
+        <button onclick="printReportCard()">Generate Report Card</button>
+        <div>
+            <table>                
+             <thead>
+              <tr>
+               <th colspan="2">REPORT CARD</th>
+              </tr>
+              <tr>
+                <th colspan="2" style="text-align:left">
+                  NAME: <span id="student_name"></span>
+                </th>
+              </tr>
+             </thead>
+             <tbody id="tbody"> </tbody>
+             <tfoot id="tfoot"></tfoot>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+      /* declare the global variables required*/
+      let name; //to store student name
+      let noOfSub; //to store the no of subjects
+      let marks = new Array(); //an arry to store marks  
+      
+      //function for getting name, no of subjects and marks entry
+      function marksEntry()
+      {
+        //get student name
+        name = prompt('Enter Student Name: '); //input dialog
+
+        //get the number of subjects
+        noOfSub = prompt('Enter Number of Subjects: ','0')//0-default value
+
+        //get the marks and store it in array
+        for(let i=0; i<noOfSub; i++)
+        {
+          marks[i] = prompt('Enter Mark for Subject-'+(i+1));  
+        }//for
+        //console.log(marks)
+      }//function close
+
+
+      //function to generate the report card
+      function printReportCard()
+      {
+        //to place the name value
+        document.getElementById('student_name').innerText = name;
+
+        let tbody_content = '<tr><th>SUBJECT</th><th>MARK</th></tr>';
+
+        let total = 0; //variable to store the total marks
+
+        for(let i=0;i<noOfSub;i++)
+        {
+            tbody_content = tbody_content+'<tr><td>Subject-'+(i+1)+'</td><td align=center>'+marks[i]+'</td></tr>';
+
+            total = total + Number(marks[i]);
+        }
+        
+        document.getElementById('tbody').innerHTML = tbody_content;
+
+        let avg = total/noOfSub; //getting the average marks
+
+        avg = avg.toFixed(2); //2 digits after decimal point
+
+        //place the total and average values in the footer section of table
+        document.getElementById('tfoot').innerHTML = '<tr><th>Total: '+ total+"</th><th>Average: "+avg+'</th></tr>';
+      }
+    </script>
+</body>
+</html>

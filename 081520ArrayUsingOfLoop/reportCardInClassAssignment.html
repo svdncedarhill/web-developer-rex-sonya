@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating a Report Card</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,grey,rgb(22, 19, 221));
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+        #wrapper
+        {
+            margin:30px;
+        }
+        #wrapper button
+        {
+            width:275px;
+            font-size:18px;
+            padding:10px;
+            border-radius:15px;
+            border: none;
+            background:linear-gradient(45deg,grey,rgb(22, 19, 221));
+            color:white;
+            margin-right: 50px;
+        }
+
+        #wrapper button:hover
+        {
+            box-shadow: 0 0 10px black;
+        }
+        table
+        {
+            width: 500px;
+            font-size: 18px;
+            margin:40px 20px;
+            border-collapse: collapse;
+        }
+
+        td,th
+        {
+            border:1px solid black
+        }
+        tr
+        {
+            height: 45px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Generating a Report Card</h2>
+    </div>
+    <div id = "wrapper">
+        <button onclick= "gradesEntry()">Data Entry</button>
+        <button onclick= "printReportCard()">Generate Report Card</button>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">REPORT CARD</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2" style="text-align: left;">NAME:<span id= "student_name"></span></th>
+                    </tr>
+                </thead>
+                <tbody id = "tbody"></tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let name;
+        let noOfSubject;
+        let grades = new Array();
+        let subject = new Array();//an array to store
+
+        function gradesEntry()
+        {
+            //get student name
+            name = prompt('Enter Student Name: ');//input dialog
+
+            noOfSubject = prompt('Enter Number of Subjects: ','0')
+
+            for(let i=0; i<noOfSubject; i++)
+            {
+                subject_names[i] = prompt('Enter Subject-'+(i+1+)+' Name:');
+            }
+
+            //get the marks and store it in array
+            for(let i=0; i<noOfSubject; i++)
+            {
+                grades[i] = prompt('Enter Grade for '+Subject_names[i+1]);
+            }//for close
+            //console.log(grades)
+        }
+
+        function  printReportCard()
+            {
+                document.getElementById('student_name').innerText = name;
+
+                let tbody_content = '<tr><th>SUBJECT</th><th>GRADE</th></tr>';
+
+                for(let i=0; i<noOfSubject; i++)
+                {
+                    tbody_content = tbody_content+'<tr><td>'+subject_names[i]+'</td><td align=center>'+grades[i]+'</td></tr>';
+
+                    total = total + Number(grades[i]);
+                }
+
+                document.getElementById('tbody').innerHTML = tbody_content;
+
+                let avg = total/noOfSubjects;//getting the average grades
+                avg = avg.toFixed(2);//2 digits after decimal point
+
+                //place the tota and average values in the footer section of table
+                document.getElementById('tfoot').innerHTML = '<tr><th>Total: '+ total+"</th><th>Average: "+avg+'</th></tr>';
+            }
+        
+    </script>
+
+
+    
+</body>
+</html>

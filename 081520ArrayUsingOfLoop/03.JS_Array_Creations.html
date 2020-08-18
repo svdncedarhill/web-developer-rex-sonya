@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            padding:10px;
+            background:linear-gradient(45deg,black,limegreen);
+            color:white;
+        }
+        #header h2{
+            margin:5px;
+        }
+    </style>
+    <title>Arrays</title>
+</head>
+<body>
+    <div id="header">
+        <h2>Java Script | Array | Creations</h2>
+    </div>
+
+    <script>
+      //1. creating an array as a literal
+      let courses =['Java','UI Technologies','ReactJS','Angular']; 
+      console.log(courses);
+    </script>
+
+    <script>
+      //2. create an array using new operator
+      let names = new Array();
+      names[0] = 'Sonya';
+      names[1] = 'Jeffery';
+      names[2] = 'Chris';
+      names[3] = 'Charles';
+      names[4] = 'Brea';
+      console.log(`${names} | Size = ${names.length}`)
+
+      names[9] = 'Sunil';
+      console.log(`${names} | Size = ${names.length}`)
+    </script>
+
+    <script>
+    //3. create an array using constructor
+    let marks = new Array(85,74,96,82,63,100);
+    console.log(`No of Subjects = ${marks.length}`)
+    console.log(marks) 
+    console.log(`================================`)   
+    </script>
+
+    <script>
+     //array with mixed content
+     let data = [34, 56, 67.5, true,{firstName:'Sunil',lastName:'Joseph'},[45,85,73,91]];
+     console.log(`Size of Array = ${data.length}`); 
+     console.log(data);  
+     console.log(data[0]); //34
+     console.log(data[4].firstName); //Sunil
+     console.log(data[4]['lastName']); //Joseph
+     console.log(data[5][3]); //91
+     console.log(data[5]);
+
+     for(let val of data)
+     {
+      console.log(val+" - "+typeof(val));   
+     }
+    </script>
+</body>
+</html>
