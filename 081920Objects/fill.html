@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array | Fill()</title>
+</head>
+<body>
+    <nav id = "header">
+        <h2> Java Script | Array | fill()</h2>
+    </nav>
+    <script>
+        let courses = ["Core Java", "Adv Java", "Hibernate", "Spring"];
+        courses[10] = 'Java Script'
+
+        console.log(`Array Size = ` + courses.length)
+        console.log(`${courses}`);
+
+        //courses.fill('HTML');
+        //courses.fill('HTML',4);
+        courses.fill('HTML',4,10);
+        console.log(`${courses}`);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array | Join()</title>
+</head>
+<body>
+    <nav id = "header">
+        <h2> Java Script | Array | Join()</h2>
+    </nav>
+    <script>
+        let marks = [98,85,74,96,61,50];
+        console.log(marks+" |Size = "+marks.length+ "|Type="+typeof(marks));
+
+        let marks_data = marks.join();
+        console.log(marks_data+" |Size = "+marks_data.length+"|Type="+ typeof(marks_data))
+
+        marks_data = marks.join('*');
+        console.log(marks_data+" |Size = "+marks_data.length+"|Type="+typeof(marks_data))
+    </script>
+    
+</body>
+</html>

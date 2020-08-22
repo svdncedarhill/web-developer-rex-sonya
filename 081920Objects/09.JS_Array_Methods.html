@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        #header {
+            padding: 10px;
+            background: linear-gradient(45deg, black, limegreen);
+            color: white;
+        }
+
+        #header h2 {
+            margin: 5px;
+        }
+    </style>
+    <title>Arrays</title>
+</head>
+
+<body>
+    <nav id="header">
+        <h2>Java Script | Array | Methods</h2>
+    </nav>
+    <script>
+        let courses = ['HTML', 'CSS', 'Java Script', 'jQuery', 'Bootstrap'];
+        console.log(`No of Courses: ${courses.length}`); //5
+        console.log(`${courses}`);
+        console.log(`Element @ index 2 = ${courses[2]}`); //Java Script
+        console.log(`--------------------------------`)
+
+        //delete the element @ index 2
+        delete courses[2];
+        console.log(`No of Courses: ${courses.length}`);
+        console.log(`${courses}`);
+        console.log(`Element @ index 2 = ${courses[2]}`); //undefined
+        console.log(`---------------------------------`)
+    </script>
+
+    <script>
+        let courses1 = ['HTML', 'CSS', 'Java Script', 'jQuery', 'Bootstrap'];
+        console.log(courses1);
+        console.log(`Size of Array = ${courses1.length}`)
+        //courses1.splice(2); //from index 2 all elements will be removed
+        //courses1.splice(2,1); //from index 2, 1 element to be removed
+        courses1.splice(2, 2, 'Core Java', 'Adv Java', 'Hibernate');//replace elemnts
+        console.log(courses1);
+        console.log(`Size of Array = ${courses1.length}`)
+        console.log(`---------------------------------`)
+    </script>
+
+    <script>
+      let arr = ["I", "study", "JavaScript", "right", "now"];
+      console.log(arr);
+      arr.splice(0, 3, "Let's", "practice");
+      console.log(arr); 
+    </script>
+
+</body>
+
+</html>
