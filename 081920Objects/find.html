@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function | Find</title>
+<body>
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background:linear-gradient(45deg,darkslategray 50%, blueviolet 50%);
+            color:white; 
+            padding:10px;           
+        }
+        #header h2{
+            margin:0px;
+        }
+
+    </style>
+</head>
+    <nav id="header">
+        <h2>Java Script | Array | find()</h2>
+    </nav>   
+    <script>
+        let ages = [2, 15, 16, 58, 19, 12, 53]
+        
+        function checkAge(age){
+            //alert(age)
+            return age >= 18;
+        }
+
+        let match_age = ages.find(checkAge);
+        console.log(match_age);
+    </script>
+
+</body>
+</html>

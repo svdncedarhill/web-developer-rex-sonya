@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Table In Class Practice</title>
+</head>
+<style>
+    body
+    {
+        margin:0px;
+    }
+    #header
+    {
+        margin-bottom:10px;
+        padding:2px;
+        background-image:linear-gradient(45deg, goldenrod, blue);
+    }
+    button
+    {
+        border:1px solid black;
+        font-size: 18px;
+        text-align: auto;
+        border-radius: 15px
+    }
+
+    table
+    {
+        width:80%;
+        margin:auto;
+        border-collapse:collapse;
+    }
+    tr
+     {
+        height:45px;
+     }
+     th,td
+     {
+         border:1px solid black;
+     }
+    #wrapper
+    {
+        width:80%;
+        margin:40px auto;
+        padding:10px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px black;
+        text-align:center;
+    }
+</style>
+
+<body>
+    <nav id="header">
+        <h2>Java Script | Employees</h2>
+    </nav>
+    <script>
+        let employees = [
+            {
+                name: 'Sunil',
+                designation: 'Founder & CEO',
+                age: 40,
+                status: true
+            },
+            {
+                name: 'Harsha',
+                designation: 'VP',
+                age: 36,
+                status: true
+            },
+            {
+                name: 'Naveen',
+                designation: 'Manager',
+                age: 28,
+                status: false
+            },
+            {
+                name: 'Vamsi',
+                designation: 'DBA',
+                age: 25,
+                status: true
+            },
+            {
+                name: 'Sonya',
+                designation: 'Softwave Engineer',
+                age: 35,
+                status: true
+            },
+            {
+                name: 'Charles',
+                designation: 'Softwave Engineer',
+                age: 29,
+                status: true
+            },         
+            {
+                name: 'Brea',
+                designation: 'Softwave Engineer',
+                age: 28,
+                status: false
+            },
+            {
+                name: 'Chris',
+                designation: 'Softwave Engineer',
+                age: 32,
+                status: true
+            },              
+            {
+                name: 'Jeffery',
+                designation: 'Softwave Engineer',
+                age: 27,
+                status: false
+            }                                    
+        ]   
+    </script>
+    <script>
+        function allEmployees()
+        {
+            let rows='';
+            for(let emp of employees)
+            {
+                rows=`${rows}<tr><td style=text-align:left>${emp.name}</td><td>${emp.age}</td><td>${emp.designation}</td><td>${emp.status}</td></tr>`;
+            }//for loop
+            document.getElementById('table_body').innerHTML = rows;
+        }//allEmployees function ends        
+    </script>
+
+    <script>
+        function activeEmployees()
+        {
+            let aEmployees = employees.filter(function (emp){
+                return emp.status;
+            });
+            let rows = '';
+            aEmployees.forEach(function(emp){
+                rows = `${rows}<tr><td style=text-align:left>${emp.name}</td><td>${emp.age}</td><td>${emp.designation}</td><td>${emp.status}</td></tr>`;
+            });
+            document.getElementById('table_body').innerHTML = rows;
+        }//activeEmployee function completes        
+    </script>
+
+    <script>
+        function inActiveEmployees()
+        {
+            let iaEmployees = employees.filter(function(emp){
+                return !emp.status;
+            });
+        
+            let rows='';
+            for(let emp of iaEmployees)
+            {
+                rows = `${rows}<tr><td style=text-align:left>${emp.name}</td><td>${emp.age}</td><td>${emp.designation}</td><td>${emp.status}</td></tr>`;
+            };
+            document.getElementById('table_body').innerHTML = rows;
+        }
+    </script>
+
+    <script>
+        function seniorStaff()
+        {
+            let sStaff = employees.filter(function(emp){
+                return emp.age > 30;
+            })
+            let rows = '';
+            for(let emp of sStaff)
+            {
+                rows = `${rows}<tr><td style=text-align:left>${emp.name}</td><td>${emp.age}</td><td>${emp.designation}</td><td>${emp.status}</td></tr>`; 
+            }//for loop
+            document.getElementById('table_body').innerHTML = rows
+        }
+    </script>
+
+    <script>
+        function juniorStaff()
+        {
+            let jStaff = employees.filter(function(emp){
+                return emp.age <=30;
+            })
+            let rows = '';
+            for(let emp of jStaff)
+            {
+                rows = `${rows}<tr><td style=text-align:left>${emp.name}</td><td>${emp.age}</td><td>${emp.designation}</td><td>${emp.status}</td></tr>`; 
+            }//for loop
+            document.getElementById('table_body').innerHTML = rows
+        }
+    </script>
+
+    <div id="wrapper">
+        <button onclick="allEmployees()">All Employees</button>
+        <button onclick="activeEmployees()">Active Employees</button>
+        <button onclick="inActiveEmployees()">In-Active Employees</button>
+        <button onclick="seniorStaff()">Senior Staff</button>
+        <button onclick="juniorStaff()">Junior Staff</button>
+
+        <div style="margin:40px;">
+            <table>
+                <thead>
+                    <th style="width:35%">NAME</th>
+                    <th style="width:10%">AGE</th>
+                    <th style="width:30%">DESIGNATION</th>
+                    <th>WORKING STATUS</th>
+                </thead>
+                <!-- table body part-->
+                <tbody id="table_body"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+    
+
+</html>

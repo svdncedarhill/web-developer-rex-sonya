@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function | Objects</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        #header{
+            background:linear-gradient(45deg,darkslategray 50%, blueviolet 50%);
+            color:white; 
+            padding:10px;           
+        }
+        #header h2{
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | Array | Objects()</h2>
+    </nav>   
+    <script>
+        let employees = [
+            {
+                name: 'Sonya',
+                designation: 'Founder & CEO',
+                age: 58,
+                status:true
+            },
+            {
+                name: 'Charles',
+                designation: 'Vice President',
+                age: 48,
+                status: true
+            },
+            {
+                name:'Jeffrey',
+                designation: 'Manager',
+                age: 57,
+                status: true
+            },
+            {
+                name: 'Brea',
+                designation:'Database Administrator',
+                age: 28,
+                status: false
+            }
+        ]
+    </script>
+    <script>
+        //display all employee details
+        for(let emp of employees)
+        {
+            console.log(emp.name+" | "+emp.designation+" | "+emp.age+" | "+emp.status)
+        }
+        console.log(`--- employee details using forEach() ---`)
+
+        employees.forEach(function(emp){
+            console.log(emp.name+" | "+emp.designation+" | "+emp.age+" | "+emp.status);
+        })
+    </script>
+    <script>
+        console.log(`\n--- Working Employees ---`)
+        let workingEmployees = employees.filter(function(emp){
+            return emp.status;
+        })
+
+        workingEmployees.forEach(function(emp){
+            console.log(`${emp.name} | ${emp.designation} | ${emp.age} | ${emp.status}`)
+        })
+    </script>
+
+    <script>
+        console.log(`\n--- Non-Working Employees ---`)
+        let nonWorkingEmployees = employees.filter(function (emp){
+            return !emp.status;
+        })
+        nonWorkingEmployees.forEach(function (emp){
+            console.log(`${emp.name} | ${emp.designation} | ${emp.age} | ${emp.status}`)
+        })
+    </script>
+
+    <script>
+        console.log(`\n--- Senior Employees ---`)
+        let seniorEmployees = employees.filter(function (emp){
+            return emp.age >= 30;
+        })
+
+        for (let emp of seniorEmployees) {
+            console.log(`${emp.name} | ${emp.designation} | ${emp.age} | ${emp.status}`)
+        }
+    </script>
+
+    <script>
+        console.log(`\n--- Junior Employees ---`)
+        let juniorEmployees = employees.filter(function (emp){
+            return emp.age < 30;
+        })
+
+        for (let emp of juniorEmployees) {
+        console.log(`${emp.name} | ${emp.designation} | ${emp.age} | ${emp.status}`)
+        }
+    </script>
+
+<script>
+    console.log(`\n--- Working Junior Employees ---`)
+    let workingJuniorEmployees = employees.filter(function (emp){
+        return emp.age < 30 && emp.status==true;
+    })
+
+    for (let emp of workingJuniorEmployees) {
+    console.log(`${emp.name} | ${emp.designation} | ${emp.age} | ${emp.status}`)
+    }
+</script>
+    
+</body>
+</html>
