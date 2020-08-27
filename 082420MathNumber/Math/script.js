@@ -14,7 +14,7 @@ console.log(`sin(0) = ${Math.sin(0)}`);
 console.log(`cos(0) = ${Math.cos(0)}`);
 
 console.log(`round(10.4) = ${Math.round(10.4)}`);
-console.log(`round(10.5) = ${Math.round(10.5))}`);
+console.log(`round(10.5) = ${Math.round(10.5)}`);
 
 let rand = Math.random();
 console.log(`random number = ${rand}`);

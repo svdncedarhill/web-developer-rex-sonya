@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Basics</title>
+</head>
+<body>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   <script>
+        let s1 = 'Java Script'; //a string literal
+        let s2 = new String("Java Script"); // a string object
+        console.log(`${s1} - ${s2}`);
+        console.log(typeof(s1)+' - '+ typeof(s2));
+
+        console.log("s1==s2 -----"+ (s1==s2));
+        console.log("s1===s2 -----"+ (s1===s2));
+
+    </script>
+    <script>
+        /*creating a string as a l;iteral */
+        let s3 = "HTML";
+        let s4 = "HTML";
+        console.log(s3==s4); //true
+        console.log(typeof(s3)+' - '+typeof(s4));
+
+        /*creating string using new operator */
+        let s5 = new String("HTML");
+        let s6 = new String("HTML");
+        console.log(s5==s6); //false
+        conosle.log(typeof(s5)+' - '+typeof(s6));
+
+        console.log(`Size of "${s5}" = ${s5.length}`);
+    </script>
+</body>
+</html>;
