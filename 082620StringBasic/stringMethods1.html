@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String | Methods</title>
+</head>
+<style>
+    body
+    {
+        margin:0px;
+    }
+    #header
+    {
+        background:linear-gradient(45deg, rgb(199, 172, 21), rgb(28, 56, 214));
+        color:white;
+        padding:10px;
+    }
+    #header h2
+    {
+        margin:5px 0px;
+    }
+</style>
+<body>
+    <nav id="header">
+        <h2>Java Script | String | Methods</h2>
+    </nav>
+    <script>
+        let str = 'REX ACADEMY';
+        console.log(`Size of "${str}" = ${str.length}`);
+
+        console.log('Charater @ index 0 = ' + str.charAt(0));
+
+        console.log('Index of "E" = '+ str.indexOf('E'));
+        console.log('Index of "ACADEMY" = '+ str.indexOf('ACADEMY'));
+        console.log('Index of "EA" = '+ str.indexOf('EA')); //-1
+
+        console.log(`Last Index of "E" = ${str.lastIndexOf('E')}`);
+        console.log(`-------------------------------------`)
+    </script>
+    <script>
+        let name = "REX";
+        console.log(name);
+
+        //name.concat('ACADEMY');
+        name = name.concat(' ACADEMY');
+        console.log(name);
+    </script>
+    
+</body>
+</html>

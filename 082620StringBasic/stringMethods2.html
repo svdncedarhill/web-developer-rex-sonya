@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<style>
+    body
+    {
+        margin:0px;
+    }
+    #header
+    {
+        background:linear-gradient(45deg, rgb(199, 172, 21), rgb(28, 56, 214));
+        color:white;
+        padding:10px;
+    }
+    #header h2
+    {
+        margin:5px 0px;
+    }
+</style>
+<body>
+    <nav id="header">
+        <h2>Java Script | String | Methods</h2>
+    </nav>
+<body>
+    <script>
+        let str = "JavaScript is a scripting language. Scripting language are often interpreted.";
+
+        console.log(`indexOf('scripting') = ${str.indexOf('scripting')}`);//16
+        console.log(`indexOf('Scripting') = ${str.indexOf('Scripting')}`);//36
+
+        console.log(`search('scripting') = ${str.search('scripting')}`)//16
+        console.log(`search('Scripting') = ${str.search('Scripting')}`);//36
+    </script>
+    <script>
+        let exp = /Scripting/i;
+        console.log(`search(expression) = ${str.search(exp)}`);//36
+    </script>
+    <script>
+        str = "Learn Node.js at REX. Node.js is a well-known JavaScript framework."
+        console.log(str);
+
+        let str1 = str.replace('Node.js', 'Angular');
+        console.log(str1);
+
+        //let str2 = str.replace(/node.js/i,'Angular');
+        let str2 = str.replace(/node.js/ig,'Angilar');
+        console.log(str2);
+    </script>
+    
+</body>
+</html>

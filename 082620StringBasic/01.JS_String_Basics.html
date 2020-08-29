@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>String Basics</title>
+    <style>
+        body{
+            margin:0px;
+            background-color:bisque;
+        }
+        #header{
+            background:linear-gradient(45deg,black 50%, orangered 50%);
+            color:white;
+            padding:10px;
+        }
+        #header h2{
+            margin:5px 0px;
+        }
+    </style>
+    <title>Strings</title>
 </head>
-<style>
-    body
-    {
-        margin:0px;
-    }
-    #header
-    {
-        background:linear-gradient(45deg, rgb(199, 172, 21), rgb(28, 56, 214));
-        color:white;
-        padding:10px;
-    }
-    #header h2
-    {
-        margin:5px 0px;
-    }
-</style>
 <body>
     <nav id="header">
-        <h2>Java Script | String | Methods</h2>
-    </nav>        
-   <script>
-        let s1 = 'Java Script'; //a string literal
+        <h2>Java Script | String | Basics</h2>
+    </nav>
+
+    <script>
+        let s1 = 'Java Script'; // a string literal
         let s2 = new String("Java Script"); // a string object
+        
         console.log(`${s1} - ${s2}`);
         console.log(typeof(s1)+' - '+ typeof(s2));
 
-        console.log("s1==s2 -----"+ (s1==s2));
-        console.log("s1===s2 -----"+ (s1===s2));
-
+        console.log("s1==s2 ----- "+ (s1==s2));
+        console.log("s1===s2 ----- "+ (s1===s2));
     </script>
     <script>
-        /*creating a string as a l;iteral */
+        /*creating a string as a literal */
         let s3 = "HTML";
         let s4 = "HTML";
         console.log(s3==s4); //true
@@ -51,4 +50,4 @@
         console.log(`Size of "${s5}" = ${s5.length}`);
     </script>
 </body>
-</html>;
+</html>
