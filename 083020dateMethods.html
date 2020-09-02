@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav id = "header">
+        <h2>Java Script | Date |Methods</h2>
+    </nav>
+    <script>
+        function findDayName(day)
+        {
+            let day_name = '';
+            switch (day){
+                case 0:
+                    day_name = 'Sunday';
+                    break;
+                case 1:
+                    day_name = 'Monday';
+                    break;
+                case 2:
+                    day_name = 'Tuesday';
+                    break;
+                case 3:
+                    day_name = 'Wednesday';
+                    break;
+                case 4:
+                    day_name = 'Thursday';
+                    break;
+                case 5:
+                    day_name = 'Friday';
+                    break;
+                case 6:
+                    day_name = 'Saturday';
+                    break;
+                default:
+                    day_name = "INVALID DAY"
+            } //switch close
+            return day_name;
+        }
+    </script>
+    <script>
+        let d1 = new Date();
+        console.log(`${d1}`)
+
+        console.log('Year = ' + d1.getFullYear());
+        console.log(`Month = ${d1.getMonth()}`);
+        console.log(`Date = ${d1.getDate()}`);
+        console.log(`Day = ${d1.getDay()}`);
+
+        console.log(`Day Name = ${findDayName(d1.getMonth())}`)
+
+        console.log(`Hours = ${d1.getHours()}`);
+        console.log(`Minutes = ${d1.getMinutes()}`);
+        console.log(`Seconds = ${d1.getSeconds()}`);
+        console.log(`Milliseconds = ${d1.getMilliseconds()}`);
+
+        console.log(`No of milliseconds from 1970 Jan 1st = ${d1.getTime()}`);
+    </script>
+    <script>
+        d1.setFullYear(2026);
+        d1.setMonth(11);
+        d1.setDate(31);
+        d1.setHours(13);
+        d1.setMinutes(34);
+        d1.setSeconds(45);
+        console.log(`${d1}`);
+    </script>
+    <script>
+        d1.setTime(1000);
+        console.log(`${d1}`);
+    </script>
+</body>
+
+</html>

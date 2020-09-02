@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+            background-color: bisque;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+
+        #header h2 {
+            margin: 5px 0px;
+        }
+        #clock{
+            font-size:40px;
+            color:blue;
+            margin:100px;
+            font-weight:bolder;
+        }
+    </style>
+    <title>Date</title>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | Date | Human Readable Formats</h2>
+    </nav>
+    
+    <script>
+        let d = new Date();
+        console.log(`${d}`);
+
+        console.log(`Date = ${d.toDateString()}`);
+        console.log(`Time = ${d.toTimeString()}`);
+
+        console.log(`Date = ${d.toLocaleDateString()}`);
+        console.log(`Time = ${d.toLocaleDateString()}`);
+
+        console.log(`Date & Time = ${d.toLocaleDateString()}`);
+    </script>
+    <script>
+        console.log(`--- time of different places of the world ---`);
+
+        let Los_Angeles_Time = d.toLocaleTimeString('en-US',
+        {timeZone:'America/Los_Angeles'});
+        console.log(`Los Angeles Time : ${Los_Angeles_Time}`);
+
+        let Chicago_Time = d.toLocaleTimeString('en-US',
+        {timeZone:'America/Chicago'});
+        console.log(`Chicago Time : ${Chicago_Time}`);
+
+        let New_York_Time = d.toLocaleTimeString('en-US',
+        {timeZone:'America/New_York'});
+        console.log(`New_York Time : ${New_York_Time}`);
+
+        let London_Time = d.toLocaleTimeString('en-GB',
+        {timeZone:'Europe/London', hour12:true}).toUpperCase();
+        console.log('England Time = '+ London_Time);
+
+        let Germany_Time = d.toLocaleTimeString('de-DE',
+        {timeZone:'Europe/Berlin'});
+        console.log(`Germany Time : ${Germany_Time}`);
+
+        let Sydney_Time = d.toLocaleTimeString('en-AU',
+        {timeZone:'Australia/Sydney', hour12: true});
+        console.log(`Australia Time : ${Sydney_Time}`);
+
+        let India_Time = d.toLocaleTimeString('en-IN',
+        {timeZone:'Asia/Calcutta'});
+        console.log(`India Time : ${India_Time}`);
+    </script>
+</body>
+</html>

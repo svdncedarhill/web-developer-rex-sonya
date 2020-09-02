@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+            background-color: bisque;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+
+        #header h2 {
+            margin: 5px 0px;
+        }
+        #clock{
+            font-size:40px;
+            color:blue;
+            margin:100px;
+            font-weight:bolder;
+        }
+        button{
+            font-size:22px;
+            padding:10px;
+            margin:10px 100px;
+        }
+    </style>
+    <title>Date</title>
+</head>
+
+<body onload="showTime()">
+    <nav id="header">
+        <h2>Java Script | Dynamic Clock</h2>
+    </nav>
+    
+    <div id="clock">CLOCK</div>
+    <button onclick="clearInterval(handler)">Change Battery</button>
+    <button onclick="resumeTime()">Resume Clock</button>
+
+    <script>
+        function showTime()
+        {
+            let d = new Date();
+
+            let time= d.toLocaleTimeString('en-US',{timeZone:'America/Chicago'});
+
+            document.getElementById('clock').innerText = time;
+        }
+
+        //setInterval(showTime, 1000);
+        let handler = setInterval(showTime,1000);
+
+        function resumeTime(){
+            handler = setInterval(showTime,1000)
+        }
+    </script>
+</body>
+
+</html>
