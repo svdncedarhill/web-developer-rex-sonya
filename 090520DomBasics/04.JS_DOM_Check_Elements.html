@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section{
+            margin:30px;
+        }
+        article, input{
+            font-size:20px;
+        }
+        article{
+            margin-top:20px;
+            font-weight:bold;
+        }
+    </style>
+    <title>DOM</title>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | DOM | findElementsByName() & check all</h2>
+    </nav>
+    <section>
+        <article>
+            <p style=color:brown>Hobby:</p>
+            <input type="checkbox" name="hobby" value="Football"> Football<br>
+            <input type="checkbox" name="hobby" value="Reading"> Reading <br>
+            <input type="checkbox" name="hobby" value="tv"> Watching TV <br>
+            <input type="checkbox" name="hobby" value="travel"> Travelling
+        </article>
+        <article>
+            <input type="button" value="Select All Hobbies" onclick="checkAllHobbies()">
+        </article>
+    </section>
+
+    <script>
+        function checkAllHobbies()
+        {
+          //get all elements with name "hobby"
+          let hobbies = document.getElementsByName('hobby');
+
+          for(let i=0;i<hobbies.length;i++)
+          {
+            //console.log(hobbies[i].checked)  
+            if(hobbies[i].type=='checkbox'){
+                hobbies[i].checked=true
+            }               
+          }
+        }
+    </script>
+</body>
+</html>

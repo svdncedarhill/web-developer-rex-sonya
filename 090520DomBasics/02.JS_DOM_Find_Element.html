@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section{
+            margin:30px;
+        }
+        article, input{
+            font-size:20px;
+        }
+    </style>
+    <title>DOM</title>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | DOM | getElementById()</h2>
+    </nav>
+    <section>
+        <article>
+            Enter Name: 
+            <input type="text" id="input_name" autofocus size=15>
+            <input type="button" value="Show Message" onclick="showMessage()">
+        </article>
+    </section>
+
+    <script>
+        function showMessage()
+        {
+          //get reference of text field
+          let name_field = document.getElementById('input_name');
+          
+          if(name_field != null)
+          {  
+            //get the text entered in the text field
+            let name = name_field.value;
+            name = name.trim(); //to take out leading and ending spaces
+
+            if(name.length <= 0){
+              alert('Welcome Guest')
+            }//if
+            else{
+              alert('Welcome, '+ name);  
+            }//else
+          }//if
+          else
+          {
+           alert('the specified element in not in web page')   
+          }//else
+        }//function
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Find Element By Name</title>
+  </head>
+  <body>
+    <nav id="header">
+      <h2>JAVA SCRIPT | DOM | findElementByName()</h2>
+    </nav>
+    <section>
+        <article>
+            Gender: <input type="radio" name="gender" value = "male">Male
+
+            <input type="radio" name="gender" value = "female">Female
+
+            <input type="radio" name="gender" value = "transgender">Transgender
+        </article>
+
+        <article>
+            <input type="button" value="Get All Genders" onclick="getAllGenders()">
+        </article>
+    </section>
+
+    <script>
+        function getAllGenders()
+        {
+            let genders = document.getElementsByName ("gender");
+            console.log(`number of genders = ${genders.length}`)
+
+            for (let element of genders)
+            {
+                console.log(element)
+                console.log(`type=${element.type} | value = ${element.value} | Checked = ${element.checked}`)
+
+                
+            }
+        }
+
+
+    </script>
+  </body>
+</html>

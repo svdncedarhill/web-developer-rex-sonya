@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            margin:0px;
+            background-color: bisque;
+        }
+        header{
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+        #header h2{
+            margin: 5px 0px;
+        }
+        #counter{
+            width:150px;
+            height:150px;
+            box-shadow: 0 0 10px black;
+            border-radius: 50%;
+            margin:100px auto;
+            background-color:darkred;
+            text-align:center;
+            font-size:30px;
+            line-height:150px;
+            color:white;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | Counter</h2>
+    </nav>
+    <p>click on START to start COUNTER</p>
+
+    <div id="counter" onclick="startCounter()">START</span></div>
+
+    <!-- Java Script Part-->
+    <script>
+        let handler,count=0;
+        function startCounter(){
+            handler = setInterval(generateCounter, 1000);
+        }
+    </script>
+    <script>
+        let generateCounter = ()=>{
+            if(count==15){
+                document.getElementById('counter').innerText = 'Done';
+                clearInterval(counter);
+            }
+            else{
+                count++;
+                document.getElementById('counter').innerText = count;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+1) document.getElementById(id) - find an element by element id
+- returns an object of type "HTMLElement" or "HTMLInputElement" etc or "null" if no elements with the specified ID exists.
+
+Ques) to  display a message box with the welcome message for the input value of the text box in the onclick event of button.
+
+
+
+2) document.getElementsByName(name) - find elements by name.
+this method returns all the elements with the specified name as a "NodeList" object.
+
+The "NodeList" object represents a collection of nodes. 
+
+The nodes can be accessed by index numbers starts from 0
+
+- use the "length" property of the NodeList object to determine the number of elements , and also we can loop through all elements and extract the details
+
+ document.getElementsByName(name)
+
+Example- 1 : to check the total number of elements with the name of "gender" in the page and also to display each element's value and type
+
+
+<html>
+<head>
+<script type="text/javascript">  
+function totalGenders()  
+{  
+ let allgenders=document.getElementsByName("gender");  
+ alert("Total Genders: "+allgenders.length);  
+
+ for(let i=0;i<genders.length;i++){
+   console.log(genders[i].value+' - '+genders[i].type)
+ }    
+}  
+</script>  
+</head>
+
+<body>
+Male: <input type="radio" name="gender" value="male"> 
+Female: <input type="radio" name="gender" value="female">    
+<input type="button" onclick="totalGenders()" 
+value="Get No of Genders"/>  
+</body>
+</html>
+
+Example-2 : to check all checkboxes with name "grad" on button click
+
+
+

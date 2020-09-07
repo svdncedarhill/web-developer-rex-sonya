@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM |Find Element by Name, Check All</title>
+<style>
+body
+{
+    margin:0px;
+    background:beige;
+    font-family:Verdana;
+    
+}
+    #header
+    {
+        background:linear-gradient(45deg, black, darkred);
+        color:white;
+        padding:10px;
+    }    
+    #header h2
+    {
+        margin:0px;
+    }
+    article
+    {
+        font-size:20px;
+        margin-top:20px;
+    }
+    section
+    {
+        margin:30px;
+    }
+</style>
+</head>
+
+<body>
+    <nav id= "header">
+        <h2>JAVA SCRIPT | DOM | findElementByName()</h2>
+    </nav>
+    <section>
+        <article>
+            <p style="color:brown; font-weight:bold">Hobby</p>
+            <input type="checkbox" value ="football" name="hobby">Football<br>
+            <input type="checkbox" value="reading" name="hobby">Reading<br>
+            <input type="checkbox" value="tv" name="hobby">Watching TV<br>
+            <input type="checkbox" value="travel"name="hobby">Travelling<br>
+        </article>
+
+        <article>
+            <input type="button" value= "Select All Hobbies" onclick="checkAllHobbies()">
+        </article>
+    </section>
+
+    <script>
+        function checkAllHobbies()
+        {
+            let hobbies = document.getElementsByName("hobby");
+            console.log("number of elements with the name hobby = "+hobbies.length)
+
+            for(let i=0; i<hobbies.length;i++)
+            {
+                hobbies[i].checked=true
+                console.log(hobbies[i])
+            }
+            
+        }
+    </script>
+    
+
+
+</body>
+</html>

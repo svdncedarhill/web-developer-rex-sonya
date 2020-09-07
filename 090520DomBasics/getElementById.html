@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Module</title>
+</head>
+<style>
+#header
+{
+    background:linear-gradient(45deg, black, darkred);
+    color:white;
+    padding:5px;
+    margin-bottom: 25px;
+}
+body
+{
+    margin:0px;
+}
+article, input
+{
+    font-size:20px;
+}
+</style>
+<body>
+   <nav id="header">
+        <h2>Java Script | DOM | getElementById()</h2>
+   </nav>
+   <section>
+        <article>
+        Enter Name:
+        <input type="text" id="input_name" autofocus size= "15">
+       <input type="button" value="Show Message" onclick="showMessage()">
+        </article>
+    </section>
+
+    <script>
+        function showMessage()
+        {
+            let name_field = document.getElementById('input_name');
+
+            if (name_field != null)
+            {
+                let name = name_field.value;
+
+                name = name.trim();
+
+                if(name.length <= 0)
+                {
+                    alert('Welcome Guest')
+                }//if close
+                else
+                {
+                    alert(`Welcome, ${name}`);
+                }//else close
+            }//if close
+            else
+            {
+                alert('the specified element is not in web page')
+            }//else close
+        }//function close
+    </script>
+
+</body>
+</html>

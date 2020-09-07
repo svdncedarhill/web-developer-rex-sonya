@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <style>
+        body{
+            margin:0px;
+            background-color: teal;
+        }
+        #header{
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+        #header h2{
+            margin: 5px 0px;
+        }
+        section{
+            margin:20px;
+            text-align:center;
+        }
+        article{
+            width:300px;
+            height:100;
+            border-radius: 15px;
+            box-shadow: 0 0 10px white;
+            display:inline-block;
+            margin-right:50px;
+            font-size: 23px;
+            line-height: 2;
+            color:white;
+            font-weight:bold;
+            text-shadow: 0 0 10px white;
+            display:inline-block;
+        }
+        #delhi{
+            background:linear-gradient(45deg, black, blue);
+        }
+        #chicago{
+            background:linear-gradient(45deg, black, orange);
+        }
+        #london{
+            background:linear-gradient(45deg, black, limegreen);
+        }
+        #sydney{
+            background:linear-gradient(45deg, black, violet);
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | World Clock</h2>
+    </nav>
+    <section>
+        <article id="delhi">DELHI</article>
+        <article id="chicago">CHICAGO</article>
+        <article id="london">LONDON</article>
+        <article id="sydney">SYDNEY</article>
+    </section>
+
+    <script>
+        function showTime()
+        {
+            let today = new Date();
+
+            let delhi_time = today.toLocaleTimeString('en-IN',{timeZone:'Asia/calcutta'}); document.getElementById('delhi').innerHTML = 'DELHI<br>' +delhi_time.toLocaleUpperCase();
+
+            let chicago_time = today.toLocaleTimeString('en-US',{timeZone:'America/Chicago'}); document.getElementById('chicago').innerHTML = 'CHICAGO<br>' +chicago_time.toLocaleUpperCase();
+
+            let london_time = today.toLocaleTimeString('en-GB',{timeZone:'Europe/London',hour12:true}); document.getElementById('london').innerHTML = 'LONDON<br>' +london_time.toLocaleUpperCase();
+
+            let sydney_time = today.toLocaleTimeString('en-AU',{timeZone:'Australia/Sydney'}); document.getElementById('sydney').innerHTML = 'SYDNEY<br>' +sydney_time.toLocaleUpperCase();
+
+            //setTimeOut(showTime,1000)
+        }
+
+        setInterval(showTime, 1000);
+    </script>
+</body>
+</html>
