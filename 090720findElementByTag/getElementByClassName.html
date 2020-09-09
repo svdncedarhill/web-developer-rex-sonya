@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Element By Class Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section
+        {
+            margin:20px;
+        }
+        p,button
+        {
+            font-style:20px;
+        }
+        .sit
+        {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+    <h2>JAVA SCRIPT | DOM | findElementsbyClassName()</h2>
+</nav>
+<section>
+    <article>
+        <h2>Courses @ REX</h2>
+        <p>1. HTML Paragraph</p>
+        <p>2. CSS Paragraph</p>
+        <p class="sit">3. Java Script Paragraph</p>
+        <h2 class="sit">-------------------</h2>
+    </article>
+    <article>
+        <button onclick="getElements()">Get Elements with Class= "sit"</button>
+    </article>
+</section>
+<script>
+    let getElements = () => {
+    // get the reference of all elements with class="sit
+        let elements = document.getElementsByClassName('sit');
+        console.log(`No of elements with class="sit > ${elements.length}`);
+
+        //to display each element with class="sit" content
+        for(let para of elements)
+        {
+            console.log(`Content = ${para.innerText}`)
+        }
+        //to change the content of the first element with class="sit"
+        if(elements.length>0)
+        {
+            elements[0].innerText='Changed Content'
+            elements[0].style.color ='red';
+            elements[0].style.fontweight ='bold'
+        }
+    }
+</script>
+</body>
+</html>

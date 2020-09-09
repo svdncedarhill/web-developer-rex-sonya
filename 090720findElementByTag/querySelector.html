@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Element By Class Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section
+        {
+            margin:20px;
+        }
+        p,button
+        {
+            font-style:20px;
+        }
+        .sit
+        {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+    <h2>JAVA SCRIPT | DOM | findElementsbyClassName()</h2>
+</nav>
+<section>
+    <article>
+        <h2>Courses @ REX</h2>
+        <p>1. HTML Paragraph</p>
+        <p>2. CSS Paragraph</p>
+        <p class="sit">3. Java Script Paragraph</p>
+        <h2 class="sit">-------------------</h2>
+    </article>
+    <article>
+        <button onclick="changeStyles()">Change Styles</button>
+    </article>
+</section>
+<script>
+    function changeStyles()
+    {
+        //get the first element with class="sit"
+        let para = document.querySelector('.sit');
+        if(para != null)
+        
+        {
+            para.style.background='linear-gradient(45deg, black 50%, orangered 50%)'
+            para.style.color='white'
+            para.style.width='250px'
+            para.style.padding='10px'
+            para.style.textAlign='center'
+            para.style.border-radius='14px'
+        }
+    }
+</script>
+
+</body>
+</html>

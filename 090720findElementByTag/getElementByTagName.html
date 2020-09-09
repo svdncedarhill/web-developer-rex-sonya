@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Element By Tag Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section
+        {
+            margin:20px;
+        }
+        p,button
+        {
+            font-style:20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+    <h2>JAVA SCRIPT | DOM | findElementsbyTagName()</h2>
+</nav>
+<section>
+    <article>
+        <h2>Courses @ REX</h2>
+        <p>1. HTML Paragraph</p>
+        <p>2. CSS Paragraph</p>
+        <p>3. Java Script Paragraph</p>
+        <h2>-------------------</h2>
+    </article>
+    <article>
+        <button onclick="getParagraphs()">Change Paragraphs Content</button>
+    </article>
+</section>
+<script>
+    let getParagraphs = () => {
+    // get the reference of all <p>
+        let paragraphs = document.getElementsByTagName('p')
+        console.log(`No of Paragraphs = ${paragraphs.length}`);
+
+        //to display each paragraph content
+        for(let para of paragraphs)
+        {
+            console.log(`Content = ${para.innerText}`)
+        }
+        //to change paragraph content
+        for(let i=0;i<paragraphs.length;i++)
+        {
+            paragraphs[i].innerText = 'Paragraph - '+(i+1)
+        }
+    }
+</script>
+</body>
+</html>

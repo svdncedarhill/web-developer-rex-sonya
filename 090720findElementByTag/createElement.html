@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        section
+        {
+            margin: 20px;
+        }
+        button
+        {
+            font-size:20px;
+            padding:10px;
+            border-radius: 10px;
+        }
+        #head_section
+        {
+            width:500px;
+            height:220px;
+            box-shadow: 0 0 10px black;
+            margin-bottom:25px;
+            border-radius: 20px;
+            background-color:cadetblue;
+            padding:10px;
+            overflow:auto
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <h2>JAVA SCRIPT | DOM | CREATE ELEMENT</h2>
+    </nav>
+    <section>
+        <article id="head_section"></article>
+        <article>
+            <button onclick="newHeading()">Add New Heading</button>
+        </article>
+    </section>
+    <script>
+        function newHeading()
+        {
+            //create a new h1 element
+            let head_1 = document.createElement('h1');
+
+            //create text for head_1
+            let text = document.createTextNode('REX ACADEMY');
+
+            //integrate text with head_1
+            head_1.appendChild(text);
+
+            //to place the head_1 in article
+            let parent = document.querySelector('#head_section');
+            parent.appendChild(head_1)
+        }
+    </script>
+</body>
+</html>
