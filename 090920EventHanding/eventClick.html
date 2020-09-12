@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: bisque;
+        }
+
+        #header {
+            background: linear-gradient(45deg, black 50%, orangered 50%);
+            color: white;
+            padding: 10px;
+        }
+
+        #header h2 {
+            margin: 5px 0px;
+        }
+
+        section {
+            margin: 30px;
+        }
+
+        article {
+            margin-top: 50px;
+        }
+
+        button {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<nav id ="header"    >
+    <h2>JAVA SCRIPT | EVENT | CLICK</h2>
+</nav>
+
+<section>
+    <article>
+        <button onclick="alert('Welcome to REX ACADEMY')">Click Me</button>
+    </article>
+
+    <article>
+        <h1 onclick="this.innerText='REX ACADEMY'">Click Me</h1>
+    </article>
+
+    <article>
+        <h1 onclick="changeSettings()" id="head_1">Click Me</h1>
+    </article>
+
+    <article>
+        <h1 id="head_2">Click Me</h1>
+    </article>
+
+    <article>
+        <h1 id="head_3">Click Me</h1>
+    </article>
+</section>
+
+        <!--java script-->
+        <script>
+            function changeSettings() {
+                let head_1 = document.querySelector('#head_1');
+                head_1.innerText = 'REX ACADEMY';
+                applySettings(head_1); //function call
+            }
+        </script>    
+        <script>
+            let head_2 = document.querySelector('#head_2');
+
+            function changeSettings1(){
+                head_2.innerText = 'REX ACADEMY';
+                applySettings(head_2); //function call
+            }
+        </script>
+        <script>
+            //to register an element with an event
+            head_2.addEventListener('click', changeSettings1);
+
+            function applySettings(element)
+            {
+                element.style.background = 'linear-gradient(45deg, black 50%, darkred 50%)';
+                
+                element.style.color = 'white';
+                element.style.padding = '10px';
+                element.style.width = '220px';
+                element.style.textAlign = 'center';
+                element.style.borderRadius = '15px';
+            }
+        </script>
+
+        <script>
+            let head_3 = document.getElementbyid('head_3');
+
+            head_3.addEventListener('click', function(){
+                head_3.innerText = 'Rex ACADEMY';
+                applySettings(head_3);
+            })
+        </script>
+
+
+    </article>
+</section>
+</body>
+</html>
