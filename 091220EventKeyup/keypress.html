@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Key Press</title>
+</head>
+<body>
+    <nav id="header">
+        <h2> JAVA SCRIPT | Event | allow only alphabets and space in text field</h2>
+    </nav>
+    <section>
+        <article>
+            Enter Name:
+            <input type="text" size=20 id="txtName" autofocus>
+        </article>
+    </section>
+    <script>
+        let name_field = document.querySelector('#txtName');
+        /*
+        ASCII Values]
+        A - 65  Z - 90
+        a - 97  z - 122
+        space - 32
+        */
+       name_field.addEventListener('keypress', function(){
+           let key = event.keyCode;
+           //console.log(key)
+           if(!((key>=65 && key<=90) || (key>=97 && key<=122) || (key==32))){
+               event.preventDefault();
+           }
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyup</title>
+</head>
+<body>
+    <nav id="header">
+        <h2> JAVA SCRIPT | EVENT | keyup</h2>
+    </nav>
+    <section>
+        <article>
+            Enter name
+            <input type="text" size=25 autofocus id='txtName' maxlength=20>
+            <span id='chars_count'></span>
+        </article>
+    </section>
+    <script>
+        //get the reference of elements
+        let input_name = document.querySelector('#txtName');
+        let chars_count = document.querySelector('#chars_count');
+        let name_duplicate = document.querySelector('#name_duplicate');
+
+        //registering keyup event with text field
+        input_name.addEventListener('keyup', function(){
+            let txt = input_name.value; //get the value of text field
+            txt = txt.toUpperCase(); //convert text to uppercase
+            input_name.value = txt //place the uppercase text in text field
+        
+            if(txt.length>0)
+                chars_count.innerText = `(${text.length})`
+            else
+                chars_count.innerText = ''
+            //to place the text field text in a different place
+            name_duplicate.innerText = txt
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="stylesheet" href="styles.css">
+    <title>Phone Numbers</title>
+</head>
+<body>
+    <nav id="header">
+        <h2> JAVA SCRIPT | Event | allow only digits and hyphen in text field</h2>
+    </nav>
+    <section>
+        <article>
+            Enter Phone Number:
+            <input type="text" size=20 id="phoneNumber" autofocus maxlength=14>
+        </article>
+    </section>
+    <script>
+        let number_field = document.querySelector('#phoneNumber');
+        /*
+        ASCII Values
+        0-48    9-57    - 45
+        */
+        
+       number_field.addEventListener('keypress', function(){
+           let key = event.keyCode;
+           //console.log(key)
+           if(!((key>=48 && key<=57) || (key==45))){
+               event.preventDefault();
+           }
+       })
+    </script>    
+</body>
+</html>

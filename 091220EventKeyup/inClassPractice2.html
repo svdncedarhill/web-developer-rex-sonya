@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Clock</title>
+    <style>
+        body
+        {
+            background: darkkhaki;
+            margin:0px;
+        }
+
+        header
+        {
+            background:linear-gradient(45deg, purple, limegreen);
+            color:white;
+            font-size: 25px;
+            padding: 10px
+        }
+       #clock
+       {
+           font-size: 25px;
+           font-weight: bolder;
+       }
+    </style>
+</head>
+<body>
+        <header>JAVA SCRIPT | EVENT | load</header>
+
+    <div id= "clock">???</div>
+
+    <script>
+        function showtime()
+        {
+            let time= new Date();
+            let a= time.toLocaleTimeString('en-US',{timeZone: 'America/Chicago'});
+            document.getElementById ("clock").innerHTML= a;
+            setTimeout(showtime,1000);
+        }
+
+        showtime();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            margin: 0px;
+            background: beige;
+        }
+        h2
+        {
+            background:linear-gradient(45deg, darkred, black, darkred);
+            color:white;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>JAVA SCRIPT | EVENT | click</h2>
+    </nav>
+    <section>
+        <article>
+            <button onclick ="alert('welcome to class')">Click Me</button>
+        </article>
+
+        <article>
+            <h1 onclick="this.innerText= 'REX ACADEMY'">Click Me</h1>
+        </article>
+
+        <article>
+            <h1 onclick="changeText_1()" id="click_2">Click Me</h1>
+        </article>
+
+        <article>
+            <h1 onclick="changeText_2()" id="click_3">Click Me</h1>
+        </article>
+
+        <article>
+            <h1 onclick="changeText_3()" id="click_4">Click Me</h1>
+        </article>
+    </section>
+
+    <script>
+        function changeText()
+        {                
+            let click= document.querySelector("#click_1");
+            click.innertext= "REX ACADEMY";
+        }
+
+        function changeText_1()
+        {
+            let click_2= document.getElementById("click_2");
+            click= document.querySelector("#click_2");
+            click.innertext= "REX ACADEMY";
+            applySettings(click);
+        }
+        
+        function changeText_2()
+        {
+            click= document.querySelector("#click_3");
+            click.innertext= "REX ACADEMY";
+            applySettings(click);
+        }
+        
+        function changeText_3()
+        {
+            click= document.querySelector("#click_4");
+            click.innertext= "REX ACADEMY";
+            applySettings(click);
+        }
+
+        function applySettings(element)
+        {
+            element.innerText= "REX ACADEMY";
+            element.style.background= "linear-gradient(45deg, black 50%, darkred 50%)";
+            element.style.borderRadius= "20px";
+            element.style.boxShadow= "0 0 10px black";
+            element.style.padding= "5px";
+            element.style.color= "white";
+            element.style.textAlign= "center";
+            element.style.width="220px";
+        }
+    </script>
+</body>
+</html>
