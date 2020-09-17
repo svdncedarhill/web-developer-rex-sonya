@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        select{
+            font-size: 20px;
+            padding:5px;
+        }
+        p{
+            color: blue;
+        }
+        #canvas{
+            width: 650px;
+            height: 200px;
+            box-shadow: 0 0 10px black;
+            margin-top:20px;
+            border-radius: 15px;;
+            background-color: white
+        }
+        </style>
+</head>
+<body>
+    <nav id= "header">
+        <h2>Java Script | Event | change</h2>
+    </nav>
+    <section>
+        <article>
+            Select Country:
+            <select name="county_names" id= Country_Names>
+                <option value="">select a country name</option>
+                <option value="IND">India</option>
+                <option>America</option>
+                <option>England</option>
+                <option>Japan</option>
+                <option>Germany</option>
+                <option>Russia</option>
+            </select>
+            <p id="states">Please select a country name</p>
+        </article>
+        <hr>
+        <article>
+            Apply Background Color:
+            <select name="bgcolor" id="bgcolor" onchange="changeBgColor(this.value)">
+            <option value="white">select a background color</option>
+            <option>black</option>
+            <option>red</option>
+            <option>green</option>
+            <option>blue</option>
+            <option>brown</option>
+            <option>orangered</option>
+            <option>lightgreen</option>
+            </select>
+            <div id="canvas"></div>
+        </article>
+    </section>
+
+    <script>
+        let country_names = document.querySelector('#country_names');
+        let states = document.querySelector('#states');
+
+        country_names.addEventListener('change', function(){
+            let country = country_names.value;
+            if(country.length>0)
+                states.innerText = 'States in '+country
+            else
+                states.innerText = 'Please select a country name'
+        })
+    </script>
+
+    <script>
+        let canvas = document.querySelector('#canvas');
+
+        function changeBbColor(newColor){
+            canvas.style.backgroundColor = newColor;
+        }
+    </script>
+</body>
+</html>

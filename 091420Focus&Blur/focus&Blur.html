@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus & Blur</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body
+        {
+            background-color: teal;
+        }
+        input
+        {
+            border:none;
+            padding:5px;
+            border-radius:5px;
+            outline:none;
+        }
+        #txtHelp
+        {
+            color:blue;
+            font-size: 16px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <nav id= "header">
+        <h2>Java Script | Event | focus & blur</h2>
+    </nav>
+    <section>
+        <article>
+            Enter Name:
+            <input type="text" size= 20 id="txtName">
+            <span id= "txthelp">(enter only alphabets)</span>
+        </article>
+    </section>
+    <script>
+        //get the reference of text field
+        let txtName = document.querySelector('#txtName');
+        let txtHelp = docuemnt.querySelector('#txtHelp');
+
+        //register focus event with text field
+        txtName.addEventListener('focus', function(){
+        txtName.style.backgroundColor = 'yellow';
+        txtName.style.boxShadow='0 0 10px white';
+        txtName.style.display='inline';
+    });
+
+    //register blur event with text field
+    txtName.addEventListener('blur', function(){
+        txtName.style.backgroundColor = 'white';
+        txtName.style.boxShadow='none';
+        txtName.style.display='none';
+    });
+    </script>
+</body>
+</html>
