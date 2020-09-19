@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        select{
+            font-size:20px;
+            padding:5px;
+        }
+        button{
+            font-size:18px;            
+        }
+    </style>
+    <title>Dynamic Options</title>
+</head>
+<body>
+    <nav id="header">
+        <h2>Java Script | Add Options Dynamically</h2>
+    </nav>
+    <section>
+        <article>
+            Enter a Course Name: 
+            <input type="text" size="20" autofocus id="cn-field">
+            <button onclick="addCourseName()">Add Course</button>
+        </article>
+        <article style="margin-top:30px">
+            Select a Course Name:
+            <select name="courses" id="courses">
+                <option value="">select a course</option>
+            </select>
+        </article>
+    </section>
+
+    <script>
+        let courses = document.querySelector('#courses');
+        let cn_field = document.querySelector('#cn-field');
+
+        function addCourseName(){
+          //get the  course name from text field
+          let course_name = cn_field.value.trim();
+          
+          //create a new Option object
+          let opt = new Option(course_name, course_name);
+
+          //add the option object with dropdown list box
+          courses[courses.length] = opt;
+
+          //clear the text field
+          cn_field.value = '';
+
+          //keep the focus on the text field
+          cn_field.focus();
+        }
+    </script>
+</body>
+</html>
