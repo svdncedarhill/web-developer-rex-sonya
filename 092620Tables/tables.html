@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with CSS</title>
+    <style>
+        table{
+            background-color:coral;
+            text-align:center;
+            width:70%;
+            font-size: 18px;        
+            border-collapse: collapse;
+            margin:auto;
+            box-shadow: 0 0 10px black;
+        }
+        tr
+        {
+            height:40px;
+        }
+        thead tr{
+            background-color:orangered;
+        }
+        th,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Table with CSS</h2>
+        <table>
+            <!-- header part of table-->
+            <thead>
+                <tr>
+                    <th>Sl No</th>
+                    <th>Course</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <!-- body part of table-->
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>UI Technologies</td>
+                    <td>09.27.2020</td>
+                    <td>07.00AM</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Angular</td>
+                    <td>09.28.2020</td>
+                    <td>09.00AM</td>
+                </tr>     
+                <tr>
+                    <td>03</td>
+                    <td>React</td>
+                    <td>09.29.2020</td>
+                    <td>11.00AM</td>
+                </tr>      
+                <tr>
+                    <td>04</td>
+                    <td>Data Science</td>
+                    <td>09.27.2020</td>
+                    <td>04.00PM</td>
+                </tr>                                     
+            </tbody>
+        </table>
+    </div></body>
+
+</body>
+</html>

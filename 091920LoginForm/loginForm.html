@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+             margin: 0px;
+             background-color: bisque;
+         }
+ 
+         #header {
+             background: linear-gradient(45deg, black 50%, orangered 50%);
+             color: white;
+             padding: 10px;
+         }
+ 
+         #header h2 {
+             margin: 5px 0px;
+         }
+ 
+         section {
+             margin: 30px;
+             font-size: 20px;
+             text-align:center;
+         }
+         article{
+             margin-top:20px;
+         }   
+         table{
+             width:400px;
+             padding:10px;
+             margin:auto;
+             background:linear-gradient(45deg,black,limegreen);
+             color:white;
+             text-align:left;
+             border-radius:15px;
+             box-shadow:0 0 10px black;
+         }     
+         input{
+             font-size:20px;
+         }
+         tr{
+             height:45px;
+         }
+         input[type='submit']{
+             background:linear-gradient(45deg,black,orangered);
+             border:none;
+             border-radius:15px;
+             padding:6px;
+             color:white;
+             width:120px;
+         }
+         input[type='submit']:hover{
+             box-shadow: 0 0 10px white;
+         }
+     </style>
+</head>
+<body>
+    <nav id="header">
+        <h2>Login Form</h2>
+    </nav>
+    <section>
+        <article>
+            <form action="Login.asp" onsubmit="return validationData()">
+                <table>
+                    <tr>
+                        <td>User Name</td>
+                        <td><input type="text" size="20" name="uid" id="username-field" placeholder="user name" autofocus required></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" size=20 name="pwd" id="password-field" placeholder="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="L o g i n">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </article>
+    </section>
+
+    <!-- java script section-->
+    <script>
+        //get form field references
+        let username_field = document.querySelector('#username-field');
+        let password_field = document.querySelector('#password-field');
+
+        function validationData()
+        {
+            //get form field values
+            let username = username_field.value;
+            if(username.length<5){
+                alert('Error:\nUsername should be min 5 chars!');
+                username_field.focus();
+                return false;
+            }
+
+            //validating password for atleast 1 character
+            let password = password_field.value;
+            if(password.length<=0){
+                alert('Error:\nPassword should be entered')
+                password_field.focus();
+                return false; //dont submit form
+            }
+        }
+    </script>
+</body>
+</html>

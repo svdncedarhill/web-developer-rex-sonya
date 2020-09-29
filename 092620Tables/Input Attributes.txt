@@ -1,0 +1,111 @@
+Attributes of <input> Tag
+-------------------------
+
+1) type=text | password | checkbox | radio | button | submit | reset | hidden | file | image | number | date | color | range | month | week  | time | email | url | datetime-local etc
+
+2) align= left | right | top | middle | bottom  specifies the alignment of an image input (only for type="image")
+
+3) alt= text - specifies an alternate text for images (only for type="image")
+
+4) checked="checked" - specifies that an <input> element should be pre-selected when the page loads (for type="checkbox" or type="radio")
+
+5) disabled="disabled" - specifies that an element should be disabled
+
+6) maxlength=number - specifies the maximum number of characters allowed in an <input> element
+
+7) name=text - specifies the name of an <input> element
+
+8) readonly="readonly" - specifies that an input field is read-only
+
+9) size=number - specifies the width, in characters, of an <input> element
+
+10) src=URL - specifies the URL of the image to use as a submit button (only for type="image")
+
+11) value= text - specifies the default value of a form element
+
+12) list = id of datalist 
+it refers to a <datalist> element that contains pre-defined options for an <input> element.
+
+Example:
+
+Browser Name : 
+<input list="browsers" name="browser">
+
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+
+13) min and max attributes
+- specify the minimum and maximum value for a number, range, date, datetime-local, month, time and week input elements.
+
+<div>
+ <form action="register.php">
+  Enter a date before 2019-10-24:
+  <input type="date" name="bday1" max="2019-10-24"><br>
+
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday2" min="2000-01-02"><br>
+
+  Quantity (between 10 and 50):
+  <input type="number" name="quantity" min="10" max="50" step="5"><br>
+
+ <input type="submit" value="register">
+</form>    
+</div>    
+
+14) multiple
+- multiple attribute specifies that the user is allowed to enter more than one value in the <input> element.
+
+This attribute works with - "email" and "file"
+
+ <form action="register.jsp" method="post" enctype="multipart/form-data">
+
+  Select Pictures: <input type="file" name="pics[]" multiple>
+  <br><br>
+  Emails <input type=email name="emails" multiple>
+  <br><br>
+  <input type="submit">
+ </form>
+
+
+15) pattern Attribute
+- specifies a regular expression that the <input> element's value is checked against.
+
+- this works with -text, search, url, tel, email, and password fields.
+
+Note: Use the "title" attribute to describe the pattern to help the user.
+
+<form action="register.jsp" method="post">
+
+ Country Code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+
+ <input type="submit" value="Register">
+</form>
+
+for more patterns : google for "HTML5 patterns"  http://html5pattern.com/
+
+16) placeholder Attribute
+- specifies a hint. The hint is displayed in the input field before the user enters a value.
+
+<input type="text" name="fname" placeholder="enter first name">
+
+
+17) required
+- attribute specifies that an input field must be filled out before submitting the form.
+
+User Name: <input type="text" name="uname" required="required">
+
+
+18) step Attribute
+- specifies the legal number intervals for an <input> element.
+
+Example: if step="3", legal numbers could be 0, 3, 6, etc.
+
+works with : number, range, date, datetime, month, time and week.
+
+ <input type="number" name="points" min="1" max="100" step="3">
